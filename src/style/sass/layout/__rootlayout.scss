@@ -1,0 +1,24 @@
+@use '../abstract/_variables';
+
+/* Layout page */
+
+.layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    border: 3px solid rgb(4, 255, 58);
+}
+.layout-main {
+    height: 100%;
+    width: 100%;
+    background: black;
+    color: white
+    // max-width: 1280px;
+    // width: 100%;
+    // padding: 0 40px;
+    // @media #{variables.$medium-down} {
+    //     padding: 0 20px;
+    // }
+}

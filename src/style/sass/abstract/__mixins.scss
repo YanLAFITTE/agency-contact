@@ -1,0 +1,13 @@
+@use '../abstract/_variables';
+
+@mixin gradient-text {
+   background-image: linear-gradient(
+      90deg,
+      variables.$clr-primary,
+      variables.$clr-secondary
+   );
+   background-clip: text;
+   -webkit-background-clip: text;
+   color: transparent;
+   -webkit-text-color: transparent;
+}

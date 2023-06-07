@@ -1,0 +1,50 @@
+//  Colors
+
+$clr-primary: #ed1e79;
+$clr-secondary: #6d0063;
+$clr-black: #000;
+$clr-white: #fff;
+$clr-star: #e3e3e3;
+
+// Typography
+
+@font-face {
+   font-family: 'PermanentMarker';
+   src: url(/src/assets/fonts/permanent-marker/PermanentMarker.ttf);
+}
+@font-face {
+   font-family: 'Roboto-Regular';
+   src: url(/src/assets/fonts/Roboto/Roboto-Regular.ttf);
+}
+@font-face {
+   font-family: 'Roboto-Medium';
+   src: url(/src/assets/fonts/Roboto/Roboto-Medium.ttf);
+}
+
+$font-headings: 'PermanentMarker';
+$font-text-regular: 'Roboto-Regular';
+$font-text-medium: 'Roboto-Medium';
+
+
+// Transition
+
+$transiton: all 200ms ease;
+
+// Media queries
+
+$small: 480px;
+$medium: 768px;
+$large: 992px;
+$xlscreen: 1440px;
+$xxlscreen: 1680px;
+
+$small-up: 'only screen  and (min-width: #{$small})';
+$small-down: 'only screen  and (max-width: #{$small})';
+$medium-up: 'only screen  and (min-width: #{$medium})';
+$medium-down: 'only screen  and (max-width: #{$medium})';
+$large-up: 'only screen  and (min-width: #{$large})';
+$large-down: 'only screen  and (max-width: #{$large})';
+$xlscreen-up: 'only screen  and (min-width: #{$xlscreen})';
+$xlscreen-down: 'only screen  and (max-width: #{$xlscreen})';
+$xxlscreen-up: 'only screen  and (min-width: #{$xxlscreen})';
+$xxlscreen-down: 'only screen  and (max-width: #{$xxlscreen})';
