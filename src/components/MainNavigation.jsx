@@ -20,7 +20,7 @@ const MainNavigation = () => {
       <header>
          <div className='header'>
             <div className='header__logo'>
-               <Link end to='/' onClick={handleToggle}>
+               <Link to='/' onClick={handleToggle}>
                   <img src={logo} alt='agency logo' />
                </Link>
             </div>

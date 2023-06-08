@@ -13,10 +13,12 @@
    }
    &__infos {
       padding: 0 200px;
+
       h2 {
          font-size: 28px;
          margin: 90px 0 30px 5px;
          font-family: variables.$font-headings;
+         white-space: nowrap;
       }
       p {
          font-size: 16px;
@@ -33,9 +35,28 @@
          font-size: 24px;
          font-family: variables.$font-headings;
          @include mixins.gradient-text;
+         white-space: nowrap;
       }
    }
-   &__slider {
-      background: black;
-   }
 }
+
+.slider {
+   width: 50vw;
+   height: 100%;
+   overflow: hidden;
+   position: relative;
+}
+
+
+// background: linear-gradient(
+//    90deg,
+//    #ed1e79,
+//    #6d0063
+// );
+// background-repeat: no-repeat;
+//  padding: 8px 16px;
+//  border-radius: 100%;
+//  color: #fff;
+
+
+// style="enable-background:new 0 0 511.641 511.641;" 

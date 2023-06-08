@@ -557,6 +557,7 @@ header {
   font-size: 28px;
   margin: 90px 0 30px 5px;
   font-family: "PermanentMarker";
+  white-space: nowrap;
 }
 .contact-section1__infos p {
   font-size: 16px;
@@ -577,9 +578,14 @@ header {
   -webkit-background-clip: text;
   color: transparent;
   -webkit-text-color: transparent;
+  white-space: nowrap;
 }
-.contact-section1__slider {
-  background: black;
+
+.slider {
+  width: 50vw;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
 }
 
 /*# sourceMappingURL=style.css.map */
