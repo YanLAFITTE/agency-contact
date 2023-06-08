@@ -12,7 +12,7 @@ const RootLayout = () => {
    return (
       <div className='layout'>
          <MainNavigation />
-         <main className='layout-main'>
+         <main className='layout__main'>
             <Outlet />
          </main>
       </div>

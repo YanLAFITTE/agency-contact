@@ -17,18 +17,18 @@ const MainNavigation = () => {
    };
 
    return (
-      <header className='header'>
-         <div className='header__container'>
-            <Link end to='/' onClick={handleToggle}>
-               <div className='header__logo'>
+      <header>
+         <div className='header'>
+            <div className='header__logo'>
+               <Link end to='/' onClick={handleToggle}>
                   <img src={logo} alt='agency logo' />
-               </div>
-            </Link>
+               </Link>
+            </div>
             <nav className={toggleNav ? 'header__nav display' : 'header__nav '}>
                <div className='nav-left'>
                   <NavLink
                      className={({ isActive }) =>
-                        isActive ? 'active link' : 'link'
+                        isActive ? 'active navlink' : 'navlink'
                      }
                      end
                      to='/'
@@ -38,7 +38,7 @@ const MainNavigation = () => {
                   </NavLink>
                   <NavLink
                      className={({ isActive }) =>
-                        isActive ? 'active link' : 'link'
+                        isActive ? 'active navlink' : 'navlink'
                      }
                      end
                      to='/whoarewe'
@@ -48,7 +48,7 @@ const MainNavigation = () => {
                   </NavLink>
                   <NavLink
                      className={({ isActive }) =>
-                        isActive ? 'active link' : 'link'
+                        isActive ? 'active navlink' : 'navlink'
                      }
                      end
                      to='/work'
@@ -60,7 +60,7 @@ const MainNavigation = () => {
                <div className='nav-right'>
                   <NavLink
                      className={({ isActive }) =>
-                        isActive ? 'active link' : 'link'
+                        isActive ? 'active navlink' : 'navlink'
                      }
                      end
                      to='/team'
@@ -70,7 +70,7 @@ const MainNavigation = () => {
                   </NavLink>
                   <NavLink
                      className={({ isActive }) =>
-                        isActive ? 'active link' : 'link'
+                        isActive ? 'active navlink' : 'navlink'
                      }
                      end
                      to='/localisation'
@@ -80,7 +80,7 @@ const MainNavigation = () => {
                   </NavLink>
                   <NavLink
                      className={({ isActive }) =>
-                        isActive ? 'active link' : 'link'
+                        isActive ? 'active navlink' : 'navlink'
                      }
                      end
                      to='/contact'
@@ -95,21 +95,19 @@ const MainNavigation = () => {
                   <img
                      src={openMenuSvg}
                      alt='open menu icon'
-                     className='open-btn-menu'
                      onClick={handleToggle}
                   />
                ) : (
                   <img
                      src={closeMenuSvg}
                      alt='close menu icon'
-                     className='close-btn-menu'
                      onClick={handleToggle}
                   />
                )}
                <h2>Menu</h2>
             </div>
          </div>
-         <div className='header__div'></div>
+         <div className='header-end'></div>
       </header>
    );
 };

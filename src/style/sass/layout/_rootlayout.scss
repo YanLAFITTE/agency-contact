@@ -1,0 +1,16 @@
+@use '../abstract/_variables';
+
+/* Layout page */
+
+.layout {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   height: 100vh;
+   width: 100vw;
+   border: 3px solid rgb(4, 255, 58);
+   &__main {
+      height: 100%;
+      width: 100%;
+   }
+}

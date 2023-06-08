@@ -1,0 +1,41 @@
+@use '../abstract/_variables';
+@use '../abstract/_mixins';
+
+.contact-section1 {
+   border: 2px solid rgb(92, 2, 249);
+   height: 420px;
+   width: 100%;
+   &__container {
+      border: 1px solid black;
+      height: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+   }
+   &__infos {
+      padding: 0 200px;
+      h2 {
+         font-size: 28px;
+         margin: 90px 0 30px 5px;
+         font-family: variables.$font-headings;
+      }
+      p {
+         font-size: 16px;
+         line-height: 1.8;
+      }
+   }
+   &__phone {
+      display: flex;
+      align-items: center;
+      margin-top: 45px;
+      margin-left: 10px;
+      gap: 2rem;
+      h3 {
+         font-size: 24px;
+         font-family: variables.$font-headings;
+         @include mixins.gradient-text;
+      }
+   }
+   &__slider {
+      background: black;
+   }
+}

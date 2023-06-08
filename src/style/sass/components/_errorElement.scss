@@ -1,0 +1,35 @@
+@use '../abstract/_variables';
+
+.error-container {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   padding: 1rem;
+   gap: 2rem;
+   height: calc(100vh - 455px);
+   width: 100%;
+   @media #{variables.$large-down} {
+      height: calc(100vh - 245px);
+   }
+   h1 {
+      font-size: 50px;
+      margin-bottom: 0;
+   }
+   p {
+      text-align: center;
+      font-size: 25px;
+      @media #{variables.$large-down} {
+         font-size: 18px;
+      }
+   }
+   &__link {
+      text-decoration: underline;
+      font-size: 20px;
+      text-align: center;
+      transition: variables.$transition;
+      &:hover {
+         color: variables.$clr-primary;
+      }
+   }
+}
