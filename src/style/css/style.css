@@ -369,6 +369,7 @@ body {
 
 header {
   width: 100vw;
+  z-index: 10;
 }
 
 .header {
@@ -376,7 +377,6 @@ header {
   position: relative;
   background-image: url("../../assets/texture.png");
   background-repeat: cover;
-  z-index: 10;
 }
 @media only screen and (max-width: 992px) {
   .header {
@@ -395,6 +395,9 @@ header {
     top: 4px;
     transform: translate(0);
     z-index: 10;
+  }
+  .header__logo.fixed {
+    position: fixed;
   }
 }
 .header__logo img {
@@ -484,6 +487,9 @@ header {
   .header__mobile {
     display: flex;
   }
+  .header__mobile.fixed {
+    position: fixed;
+  }
 }
 .header__mobile h2 {
   font-family: "PermanentMarker";
@@ -539,13 +545,25 @@ header {
   color: #ed1e79;
 }
 
+.slider {
+  width: 50vw;
+  height: 100%;
+  overflow: hidden;
+}
+@media only screen and (max-width: 992px) {
+  .slider {
+    width: 100vw;
+    height: 250px;
+  }
+}
+
 .contact-section1 {
   height: 420px;
   width: 100vw;
 }
 @media only screen and (max-width: 992px) {
   .contact-section1 {
-    height: 100%;
+    height: auto;
   }
 }
 .contact-section1__container {
@@ -588,21 +606,16 @@ header {
   }
 }
 .contact-section1__infos p {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.8;
-}
-@media only screen and (max-width: 992px) {
-  .contact-section1__infos p {
-    font-size: 14px;
-  }
 }
 .contact-section1__phone {
   display: flex;
   align-items: center;
   margin-top: 45px;
+  margin-bottom: 60px;
   margin-left: 10px;
   gap: 2rem;
-  margin-bottom: 60px;
 }
 @media only screen and (max-width: 992px) {
   .contact-section1__phone {
@@ -628,15 +641,107 @@ header {
   white-space: nowrap;
 }
 
-.slider {
-  width: 50vw;
-  height: 100%;
-  overflow: hidden;
+.section2andform-container {
+  border: 1px solid greenyellow;
+  display: flex;
 }
 @media only screen and (max-width: 992px) {
-  .slider {
+  .section2andform-container {
+    flex-direction: column;
+    margin-top: 1px;
+  }
+}
+
+.contact-section2 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+}
+@media only screen and (max-width: 992px) {
+  .contact-section2 {
     width: 100vw;
-    height: 250px;
+  }
+}
+.contact-section2 img {
+  height: 600px;
+  width: 50vw;
+  object-fit: cover;
+}
+@media only screen and (max-width: 992px) {
+  .contact-section2 img {
+    width: 100vw;
+    height: 360px;
+  }
+}
+.contact-section2__infos {
+  position: absolute;
+  height: 600px;
+  width: 50vw;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 0 180px 0 200px;
+}
+@media only screen and (max-width: 1440px) {
+  .contact-section2__infos {
+    padding: 0 20% 0 50px;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .contact-section2__infos {
+    text-align: center;
+    padding: 0 50px;
+    width: 100vw;
+    height: 360px;
+  }
+}
+.contact-section2__infos h2 {
+  font-size: 28px;
+  margin: 150px 0 30px 5px;
+  font-family: "PermanentMarker";
+  white-space: nowrap;
+}
+@media only screen and (max-width: 992px) {
+  .contact-section2__infos h2 {
+    margin-top: 60px;
+    font-size: 24px;
+  }
+}
+.contact-section2__infos p {
+  font-size: 14px;
+  line-height: 1.8;
+}
+.contact-section2__infos h3 {
+  font-size: 18px;
+  font-family: "PermanentMarker";
+  margin-top: 45px;
+  margin-bottom: 60px;
+}
+.contact-section2__map {
+  width: 50vw;
+  height: 400px;
+  background: black;
+  color: white;
+}
+@media only screen and (max-width: 992px) {
+  .contact-section2__map {
+    width: 100vw;
+    height: 240px;
+  }
+}
+
+.contact-form {
+  padding: 5rem;
+  height: 1000px;
+  width: 50vw;
+  background: linear-gradient(90deg, #ed1e79, #6d0063);
+  background-repeat: no-repeat;
+}
+@media only screen and (max-width: 992px) {
+  .contact-form {
+    width: 100vw;
   }
 }
 

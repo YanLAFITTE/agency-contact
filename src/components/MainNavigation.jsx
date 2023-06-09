@@ -19,12 +19,14 @@ const MainNavigation = () => {
    return (
       <header>
          <div className='header'>
-            <div className='header__logo'>
+            <div className={toggleNav ? 'header__logo fixed' : 'header__logo'}>
                <Link to='/' onClick={handleToggle}>
                   <img src={logo} alt='agency logo' />
                </Link>
             </div>
-            <nav className={toggleNav ? 'header__nav display' : 'header__nav '}>
+            <nav
+               className={toggleNav ? 'header__nav display' : ' header__nav '}
+            >
                <div className='nav-left'>
                   <NavLink
                      className={({ isActive }) =>
@@ -90,17 +92,21 @@ const MainNavigation = () => {
                   </NavLink>
                </div>
             </nav>
-            <div className='header__mobile'>
-               {!toggleNav ? (
+            <div
+               className={
+                  toggleNav ? 'header__mobile fixed' : ' header__mobile'
+               }
+            >
+               {toggleNav ? (
                   <img
-                     src={openMenuSvg}
-                     alt='open menu icon'
+                     src={closeMenuSvg}
+                     alt='close menu icon'
                      onClick={handleToggle}
                   />
                ) : (
                   <img
-                     src={closeMenuSvg}
-                     alt='close menu icon'
+                     src={openMenuSvg}
+                     alt='open menu icon'
                      onClick={handleToggle}
                   />
                )}

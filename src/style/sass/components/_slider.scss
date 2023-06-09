@@ -1,0 +1,11 @@
+@use '../abstract/variables';
+
+.slider {
+   width: 50vw;
+   height: 100%;
+   overflow: hidden;
+   @media #{variables.$large-down} {
+      width: 100vw;
+      height: 250px;
+   }
+}

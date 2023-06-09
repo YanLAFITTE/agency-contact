@@ -3,13 +3,14 @@
 
 header {
    width: 100vw;
+   z-index: 10;
 }
+
 .header {
    height: 430px;
    position: relative;
    background-image: url('../../assets/texture.png');
    background-repeat: cover;
-   z-index: 10;
    @media #{variables.$large-down} {
       height: 220px;
    }
@@ -23,6 +24,9 @@ header {
          top: 4px;
          transform: translate(0);
          z-index: 10;
+         &.fixed {
+            position: fixed;
+         }
       }
       img {
          width: 172px;
@@ -94,6 +98,9 @@ header {
       display: none;
       @media #{variables.$large-down} {
          display: flex;
+         &.fixed {
+            position: fixed;
+         }
       }
       h2 {
          font-family: variables.$font-headings;
