@@ -9,6 +9,7 @@ header {
    position: relative;
    background-image: url('../../assets/texture.png');
    background-repeat: cover;
+   z-index: 10;
    @media #{variables.$large-down} {
       height: 220px;
    }

@@ -361,7 +361,6 @@ body {
   align-items: center;
   height: 100vh;
   width: 100vw;
-  border: 3px solid rgb(4, 255, 58);
 }
 .layout__main {
   height: 100%;
@@ -377,6 +376,7 @@ header {
   position: relative;
   background-image: url("../../assets/texture.png");
   background-repeat: cover;
+  z-index: 10;
 }
 @media only screen and (max-width: 992px) {
   .header {
@@ -540,18 +540,40 @@ header {
 }
 
 .contact-section1 {
-  border: 2px solid rgb(92, 2, 249);
   height: 420px;
-  width: 100%;
+  width: 100vw;
+}
+@media only screen and (max-width: 992px) {
+  .contact-section1 {
+    height: 100%;
+  }
 }
 .contact-section1__container {
-  border: 1px solid black;
-  height: 100%;
+  width: 100vw;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
+@media only screen and (max-width: 992px) {
+  .contact-section1__container {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .contact-section1__infos {
-  padding: 0 200px;
+  padding: 0 180px 0 200px;
+}
+@media only screen and (max-width: 1440px) {
+  .contact-section1__infos {
+    padding: 0 20% 0 50px;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .contact-section1__infos {
+    text-align: center;
+    padding: 0 50px;
+    width: 100vw;
+    height: 330px;
+  }
 }
 .contact-section1__infos h2 {
   font-size: 28px;
@@ -559,9 +581,20 @@ header {
   font-family: "PermanentMarker";
   white-space: nowrap;
 }
+@media only screen and (max-width: 992px) {
+  .contact-section1__infos h2 {
+    margin-top: 60px;
+    font-size: 24px;
+  }
+}
 .contact-section1__infos p {
   font-size: 16px;
   line-height: 1.8;
+}
+@media only screen and (max-width: 992px) {
+  .contact-section1__infos p {
+    font-size: 14px;
+  }
 }
 .contact-section1__phone {
   display: flex;
@@ -569,10 +602,24 @@ header {
   margin-top: 45px;
   margin-left: 10px;
   gap: 2rem;
+  margin-bottom: 60px;
+}
+@media only screen and (max-width: 992px) {
+  .contact-section1__phone {
+    justify-content: center;
+    margin-left: 0;
+    margin-top: 30px;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .contact-section1__phone img {
+    height: 30px;
+  }
 }
 .contact-section1__phone h3 {
   font-size: 24px;
   font-family: "PermanentMarker";
+  margin-top: -5px;
   background-image: linear-gradient(90deg, #ed1e79, #6d0063);
   background-clip: text;
   -webkit-background-clip: text;
@@ -585,7 +632,12 @@ header {
   width: 50vw;
   height: 100%;
   overflow: hidden;
-  position: relative;
+}
+@media only screen and (max-width: 992px) {
+  .slider {
+    width: 100vw;
+    height: 250px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

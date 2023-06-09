@@ -1,5 +1,6 @@
 import phoneSvg from '../assets/phone.svg';
 import Slider from '../components/Slider';
+// import photo1 from '../assets/photo1.jpg';
 
 const Contact = () => {
    return (
@@ -17,7 +18,7 @@ const Contact = () => {
                   <h3>05 59 20 90 50</h3>
                </div>
             </div>
-
+            {/* <div className='img-container'><img src={photo1} alt="" /></div> */}
             <Slider />
          </div>
       </section>

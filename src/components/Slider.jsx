@@ -20,29 +20,66 @@ const Slider = () => {
          loop: true,
          injectStyles: [
             `
+            .swiper-slide-active img {
+               width: 100%;
+               height: 420px;
+               object-fit: cover;
+               overflow: hidden;
+               object-position: bottom;
+            }
+            
+            .swiper-initialized {
+               width: 100%;
+               height: 420px;
+            }
+            
+            @media (max-width: 992px) {
+               .swiper-slide-active img, .swiper-slide-active, .swiper-initialized {
+               height: 250px;
+            }}
+            
             .swiper-button-next,
-            .swiper-button-prev {
+            .swiper-button-prev {  
               background-image:  linear-gradient(90deg, #ed1e79, #6d0063);
               background-repeat: no-repeat;
-              background-size: 80px;
-              height: 80px;
-              width: 80px;
-              border-radius: 100%;
-              }
+              height: 60px;
+              width: 60px;
+              border-radius: 50%;
+              position: absolute;
+              top: calc(50% - 8px);
+            }
+
+            .swiper-button-next {
+              right: 6%;
+            } 
+
+            .swiper-button-prev {
+              left: 6%;
+            }  
 
             .swiper-button-next::after,
             .swiper-button-prev::after {
               content: '';
               background-image:  url('./src/assets/chevron-white.png');
               background-repeat: no-repeat;
-              background-size: 30px;
-              height: 30px;
-              width: 30px;
+              background-size: 22px;
+              height: 22px;
+              width: 22px;
               color: #fff;
+              position: absolute;
             }
 
             .swiper-button-next::after {
               transform: rotate(180deg);
+              left: 22px; 
+            }
+
+            .swiper-button-prev::after {
+              right: 22px; 
+            }
+
+            .swiper-pagination {
+              margin-bottom: 30px;
             }
 
             .swiper-pagination-bullet {
@@ -50,13 +87,11 @@ const Slider = () => {
               height: 10px;
               background: #fff;
               opacity: 1 ;
-              padding: 2px;
-            
+            }
+            .swiper-pagination-bullet-active {
+              background: #ed1e79;
           }
-          .swiper-pagination-bullet-active {
-            background: #ed1e79;
-         }
-      `,
+          `,
          ],
       };
 
