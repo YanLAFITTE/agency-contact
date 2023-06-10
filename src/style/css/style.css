@@ -580,6 +580,120 @@ a[href^="https://www.google.com/maps"] {
   display: none;
 }
 
+.contact-form {
+  height: 1000px;
+  width: 50vw;
+  background: linear-gradient(90deg, #ed1e79, #6d0063);
+  background-repeat: no-repeat;
+}
+@media only screen and (max-width: 992px) {
+  .contact-form {
+    width: 100vw;
+  }
+}
+
+.form-container {
+  text-align: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  padding: 110px 0 120px;
+  /* For IE10 */
+}
+.form-container form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 350px;
+  margin: 0 auto;
+}
+.form-container div {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+}
+.form-container label {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+}
+.form-container .asterix {
+  margin-bottom: -2px;
+  margin-left: 5px;
+  font-size: 14px;
+}
+.form-container select,
+.form-container input,
+.form-container textarea,
+.form-container button {
+  margin-bottom: 30px;
+  margin-top: 15px;
+  height: 55px;
+  border-radius: 10px;
+  padding: 18px 30px;
+  background: transparent;
+  border: 1px solid #fff;
+}
+.form-container select {
+  color: #fff;
+  font-size: 14px;
+  /* for Firefox */
+  -moz-appearance: none;
+  /* for Chrome */
+  -webkit-appearance: none;
+}
+.form-container select::-ms-expand {
+  display: none;
+}
+.form-container select:hover,
+.form-container input:hover,
+.form-container textarea:hover,
+.form-container button:hover {
+  border: 1px solid #ed1e79;
+}
+.form-container select::placeholder,
+.form-container input::placeholdert,
+.form-container textarea::placeholder {
+  font-size: 14px;
+}
+.form-container input::placeholder,
+.form-container textarea::placeholder {
+  color: #6d0063;
+}
+.form-container textarea {
+  height: 114px;
+}
+.form-container button {
+  background: #fff;
+  width: 240px;
+  height: 57px;
+  margin: 10px auto 0;
+}
+.form-container button span {
+  text-transform: uppercase;
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-family: "Roboto-Medium";
+  background-image: linear-gradient(90deg, #ed1e79, #6d0063);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-color: transparent;
+}
+.form-container h2 {
+  font-family: "PermanentMarker";
+  font-size: 26px;
+}
+.form-container p {
+  margin-bottom: 50px;
+  margin-top: 20px;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
 .contact-section1 {
   height: 420px;
   width: 100vw;
@@ -740,19 +854,6 @@ a[href^="https://www.google.com/maps"] {
   font-family: "PermanentMarker";
   margin-top: 45px;
   margin-bottom: 60px;
-}
-
-.contact-form {
-  padding: 5rem;
-  height: 1000px;
-  width: 50vw;
-  background: linear-gradient(90deg, #ed1e79, #6d0063);
-  background-repeat: no-repeat;
-}
-@media only screen and (max-width: 992px) {
-  .contact-form {
-    width: 100vw;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */

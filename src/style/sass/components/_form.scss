@@ -1,0 +1,110 @@
+@use '../abstract/variables';
+@use '../abstract/mixins';
+
+.contact-form {
+   height: 1000px;
+   width: 50vw;
+   @include mixins.background-gradient;
+   @media #{variables.$large-down} {
+      width: 100vw;
+   }
+}
+
+.form-container {
+   text-align: center;
+   color: variables.$clr-white;
+   display: flex;
+   flex-direction: column;
+   height: 100%;
+   width: 100%;
+   padding: 110px 0 120px;
+   & form {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 350px;
+      margin: 0 auto;
+   }
+   & div {
+      display: flex;
+      flex-direction: column;
+      text-align: start;
+   }
+   label {
+      display: flex;
+      align-items: center;
+      font-size: 16px;
+   }
+   .asterix {
+      margin-bottom: -2px;
+      margin-left: 5px;
+      font-size: 14px;
+   }
+   & select,
+   input,
+   textarea,
+   button {
+      margin-bottom: 30px;
+      margin-top: 15px;
+      height: 55px;
+      border-radius: 10px;
+      padding: 18px 30px;
+      background: transparent;
+      border: 1px solid variables.$clr-white;
+   }
+   & select {
+      color: variables.$clr-white;
+      font-size: 14px;
+      /* for Firefox */
+      -moz-appearance: none;
+      /* for Chrome */
+      -webkit-appearance: none;
+   }
+   /* For IE10 */
+   & select::-ms-expand {
+      display: none;
+   }
+
+   & select:hover,
+   input:hover,
+   textarea:hover,
+   button:hover {
+      border: 1px solid variables.$clr-primary;
+   }
+   & select::placeholder,
+   input::placeholdert,
+   textarea::placeholder {
+      font-size: 14px;
+   }
+   & input::placeholder,
+   textarea::placeholder {
+      color: variables.$clr-secondary;
+   }
+   & textarea {
+      height: 114px;
+   }
+   & button {
+      background: variables.$clr-white;
+      width: 240px;
+      height: 57px;
+      margin: 10px auto 0;
+      & span {
+         text-transform: uppercase;
+         font-size: 18px;
+         letter-spacing: 2px;
+         font-family: variables.$font-text-medium;
+         @include mixins.gradient-text;
+      }
+   }
+   & h2 {
+      font-family: variables.$font-headings;
+      font-size: 26px;
+   }
+   & p {
+      margin-bottom: 50px;
+      margin-top: 20px;
+      line-height: 1.6;
+      font-size: 14px;
+   }
+}

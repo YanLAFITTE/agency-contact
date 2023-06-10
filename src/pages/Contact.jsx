@@ -2,6 +2,7 @@ import phoneSvg from '../assets/phone.svg';
 import Slider from '../components/Slider';
 import localisationJpg from '../assets/localisation.jpg';
 import Map from '../components/Map';
+import Form from '../components/Form';
 
 const Contact = () => {
    return (
@@ -45,7 +46,9 @@ const Contact = () => {
                </div>
                <Map />
             </section>
-            <section className='contact-form'>FORM</section>
+            <section className='contact-form'>
+               <Form />
+            </section>
          </div>
       </>
    );

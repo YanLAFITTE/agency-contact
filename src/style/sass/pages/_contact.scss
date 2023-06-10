@@ -141,14 +141,3 @@
       }
    }
 }
-
-
-.contact-form {
-   padding: 5rem;
-   height: 1000px;
-   width: 50vw;
-   @include mixins.background-gradient;
-   @media #{variables.$large-down} {
-      width: 100vw;
-   }
-}
