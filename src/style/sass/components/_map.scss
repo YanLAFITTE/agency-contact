@@ -1,0 +1,22 @@
+@use '../abstract/variables.scss';
+
+.map {
+   width: 50vw;
+   height: 400px;
+   @media #{variables.$large-down} {
+      width: 100vw;
+      height: 240px;
+   }
+}
+
+a[href^="http://maps.google.com/maps"],
+a[href^="https://maps.google.com/maps"],
+a[href^="https://www.google.com/maps"]
+{
+   display: none !important;
+}
+.gmnoprint a,
+.gmnoprint span,
+.gmnoprint div {
+   display: none;
+}

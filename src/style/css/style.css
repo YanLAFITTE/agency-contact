@@ -557,6 +557,29 @@ header {
   }
 }
 
+.map {
+  width: 50vw;
+  height: 400px;
+}
+@media only screen and (max-width: 992px) {
+  .map {
+    width: 100vw;
+    height: 240px;
+  }
+}
+
+a[href^="http://maps.google.com/maps"],
+a[href^="https://maps.google.com/maps"],
+a[href^="https://www.google.com/maps"] {
+  display: none !important;
+}
+
+.gmnoprint a,
+.gmnoprint span,
+.gmnoprint div {
+  display: none;
+}
+
 .contact-section1 {
   height: 420px;
   width: 100vw;
@@ -642,7 +665,6 @@ header {
 }
 
 .section2andform-container {
-  border: 1px solid greenyellow;
   display: flex;
 }
 @media only screen and (max-width: 992px) {
@@ -718,18 +740,6 @@ header {
   font-family: "PermanentMarker";
   margin-top: 45px;
   margin-bottom: 60px;
-}
-.contact-section2__map {
-  width: 50vw;
-  height: 400px;
-  background: black;
-  color: white;
-}
-@media only screen and (max-width: 992px) {
-  .contact-section2__map {
-    width: 100vw;
-    height: 240px;
-  }
 }
 
 .contact-form {

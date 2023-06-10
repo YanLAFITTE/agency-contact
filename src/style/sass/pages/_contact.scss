@@ -77,9 +77,7 @@
 // Section 2
 
 .section2andform-container {
-   border: 1px solid greenyellow;
    display: flex;
-  
    @media #{variables.$large-down} {
       flex-direction: column;
       margin-top: 1px;
@@ -142,18 +140,8 @@
          margin-bottom: 60px;
       }
    }
-   &__map {
-     
-      width: 50vw;
-      height: 400px;
-      background: black;
-      color: white;
-      @media #{variables.$large-down} {
-         width: 100vw;
-         height: 240px;
-      }
-   }
 }
+
 
 .contact-form {
    padding: 5rem;
