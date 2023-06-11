@@ -6,7 +6,12 @@
 
    cursor: pointer;
    & img {
-      margin-top: -10px;
+      margin: 4px 10px 0;
+      transform: rotate(-90deg);
+   }
+   .rotate-arrow {
+      margin: 0 10px;
+      transform: rotate(90deg);
    }
 }
 
@@ -14,12 +19,11 @@
    border: 1px solid variables.$clr-primary;
 }
 
-.rotate-arrow {
-   transform: rotate(180deg);
-}
-
 .value {
    margin-left: 10px;
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
 }
 
 .form-container .select {
@@ -46,8 +50,7 @@
 }
 
 .content > *:hover {
-   background: variables.$clr-white;
-   color: variables.$clr-black;
+   background: variables.$clr-primary;
 }
 
 .content :last-child {
@@ -56,4 +59,20 @@
 
 .content::-webkit-scrollbar {
    display: none;
+}
+
+.country-container {
+   display: flex;
+   flex-direction: row;
+   justify-content: flex-start;
+   & img {
+      padding: 0 30px 0 10px;
+   }
+}
+.country-name {
+   margin-right: auto;
+   margin-left: 30px;
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
 }
