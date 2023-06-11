@@ -18,6 +18,7 @@
    height: 100%;
    width: 100%;
    padding: 110px 0 120px;
+
    & form {
       height: 100%;
       display: flex;
@@ -72,6 +73,13 @@
    button:hover {
       border: 1px solid variables.$clr-primary;
    }
+   & select:focus,
+   input:focus,
+   textarea:focus,
+   button:focus {
+      border: 1px solid variables.$clr-primary;;
+   }
+   
    & select::placeholder,
    input::placeholdert,
    textarea::placeholder {
@@ -107,4 +115,17 @@
       line-height: 1.6;
       font-size: 14px;
    }
+}
+
+
+.select-container {
+   position: relative;
+}
+
+.icon-down {
+   position: absolute;
+   left: 10px;
+   bottom: 45px;
+   height: 20px;
+   width: 20px;
 }

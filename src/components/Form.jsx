@@ -1,19 +1,35 @@
-import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import { useForm } from 'react-hook-form';
+
 import iconDown from '../assets/icon-down.png';
 
 const Form = () => {
-   const form = useRef();
+   const {
+      register,
+      handleSubmit,
+      formState: { errors },
+   } = useForm({
+      defaultValues: {
+         username: '',
+         email: '',
+         message: '',
+      },
+   });
 
-   const sendEmail = (e) => {
-      e.preventDefault();
+   const onSubmit = (data) => {
+      const newData = {
+         name: data.username,
+         email: data.email,
+         message: data.message,
+         country: data.countries,
+      };
 
       emailjs
-         .sendForm(
-            'YOUR_SERVICE_ID',
-            'YOUR_TEMPLATE_ID',
-            form.current,
-            'YOUR_PUBLIC_KEY'
+         .send(
+            import.meta.env.VITE_SERVICE_ID,
+            import.meta.env.VITE_TEMPLATE_ID,
+            newData,
+            import.meta.env.VITE_PUBLIC_KEY
          )
          .then(
             (result) => {
@@ -24,6 +40,7 @@ const Form = () => {
             }
          );
    };
+
    return (
       <div className='form-container'>
          <h2>Drop us a line</h2>
@@ -31,17 +48,22 @@ const Form = () => {
             ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse{' '}
             <br /> lectus tortor, dignissim sit amet, adipiscing nec dolor.
          </p>
-         <form ref={form} onSubmit={sendEmail}>
-            <div>
+         <form onSubmit={handleSubmit(onSubmit)}>
+            <div className='select-container'>
                <label htmlFor='countries'>
                   Choose your country <span className='asterix'>*</span>
                </label>
-               <select name='countries' id='countries'>
+               <select
+                  name='countries'
+                  id='countries'
+                  {...register('countries', { required: true })}
+               >
                   <option value='france'>France</option>
                   <option value='england'>England</option>
                   <option value='us'>US</option>
                   <option value='brasil'>Brasil</option>
                </select>
+               {/* <img src={iconDown} alt='' className='icon-down' /> */}
             </div>
             <div>
                <label htmlFor='username'>
@@ -52,7 +74,12 @@ const Form = () => {
                   name='username'
                   id='username'
                   placeholder='John Doe'
+                  {...register('username', {
+                     required: true,
+                     minLength: { value: 4, message: 'Min lenth is 4' },
+                  })}
                />
+               {/* {errors.username && <span>{errors.username?.message}</span>} */}
             </div>
             <div>
                <label>
@@ -63,6 +90,10 @@ const Form = () => {
                   name='email'
                   id='email'
                   placeholder='johndoe@gmail.com'
+                  {...register('email', {
+                     required: true,
+                     pattern: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/,
+                  })}
                />
             </div>
             <div data-tippy-content='Enter your message!'>
@@ -74,6 +105,10 @@ const Form = () => {
                   name='message'
                   id='message'
                   placeholder='Drop us a line'
+                  {...register('message', {
+                     required: 'This is required!',
+                     minLength: { value: 4, message: 'Min lenth is 4' },
+                  })}
                ></textarea>
             </div>
             <button

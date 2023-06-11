@@ -654,6 +654,12 @@ a[href^="https://www.google.com/maps"] {
 .form-container button:hover {
   border: 1px solid #ed1e79;
 }
+.form-container select:focus,
+.form-container input:focus,
+.form-container textarea:focus,
+.form-container button:focus {
+  border: 1px solid #ed1e79;
+}
 .form-container select::placeholder,
 .form-container input::placeholdert,
 .form-container textarea::placeholder {
@@ -692,6 +698,18 @@ a[href^="https://www.google.com/maps"] {
   margin-top: 20px;
   line-height: 1.6;
   font-size: 14px;
+}
+
+.select-container {
+  position: relative;
+}
+
+.icon-down {
+  position: absolute;
+  left: 10px;
+  bottom: 45px;
+  height: 20px;
+  width: 20px;
 }
 
 .contact-section1 {
