@@ -630,6 +630,7 @@ a[href^="https://www.google.com/maps"] {
   padding: 18px 30px;
   background: transparent;
   border: 1px solid #fff;
+  transition: all 200ms ease;
 }
 .form-container input:focus,
 .form-container textarea:focus,
@@ -688,16 +689,17 @@ a[href^="https://www.google.com/maps"] {
   cursor: pointer;
 }
 .select img {
-  margin: 4px 10px 0;
+  margin: 3px 10px 0;
   transform: rotate(-90deg);
 }
 .select .rotate-arrow {
-  margin: 0 10px;
+  margin: -1px 10px;
   transform: rotate(90deg);
 }
 
 .select.border {
   border: 1px solid #ed1e79;
+  transition: all 200ms ease;
 }
 
 .value {
@@ -729,6 +731,7 @@ a[href^="https://www.google.com/maps"] {
   border-bottom: 1px solid #fff;
   padding: 18px 0;
   cursor: pointer;
+  transition: all 200ms ease;
 }
 
 .content > *:hover {

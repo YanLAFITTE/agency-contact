@@ -3,20 +3,20 @@
 
 .select {
    display: flex;
-
    cursor: pointer;
    & img {
-      margin: 4px 10px 0;
+      margin: 3px 10px 0;
       transform: rotate(-90deg);
    }
    .rotate-arrow {
-      margin: 0 10px;
+      margin: -1px 10px;
       transform: rotate(90deg);
    }
 }
 
 .select.border {
    border: 1px solid variables.$clr-primary;
+   transition: variables.$transition;
 }
 
 .value {
@@ -47,6 +47,7 @@
    border-bottom: 1px solid variables.$clr-white;
    padding: 18px 0;
    cursor: pointer;
+   transition: variables.$transition;
 }
 
 .content > *:hover {

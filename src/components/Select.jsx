@@ -44,7 +44,7 @@ const Select = ({ countries, countryValue, setCountryValue }) => {
                            <div>
                               <img
                                  src={countryObj.flags?.svg}
-                                 alt=''
+                                 alt='arrow down'
                                  height='20px'
                               />
                            </div>
