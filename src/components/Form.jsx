@@ -1,7 +1,9 @@
 import emailjs from '@emailjs/browser';
 import { useForm } from 'react-hook-form';
+import Select from '../components/Select';
+import { useState } from 'react';
 
-import iconDown from '../assets/icon-down.png';
+// import iconDown from '../assets/icon-down.png';
 
 const Form = () => {
    const {
@@ -16,7 +18,9 @@ const Form = () => {
       },
    });
 
-   const onSubmit = (data) => {
+   const [value, setValue] = useState('France');
+
+   const onSubmit = (data, e) => {
       const newData = {
          name: data.username,
          email: data.email,
@@ -34,12 +38,28 @@ const Form = () => {
          .then(
             (result) => {
                console.log(result.text);
+               e.target.reset();
+               alert('Message envoyé !');
             },
             (error) => {
                console.log(error.text);
             }
          );
    };
+
+   const towns = [
+      'Hamburg',
+      'Berlin',
+      'Munich',
+      'Amsterdam',
+      'Rotterdam',
+      'Mexico',
+      'Rio de Janeiro',
+      'Tokyo',
+      'Moscou',
+      'Shangai',
+      'Sao Paulo',
+   ];
 
    return (
       <div className='form-container'>
@@ -49,23 +69,13 @@ const Form = () => {
             <br /> lectus tortor, dignissim sit amet, adipiscing nec dolor.
          </p>
          <form onSubmit={handleSubmit(onSubmit)}>
-            <div className='select-container'>
-               <label htmlFor='countries'>
-                  Choose your country <span className='asterix'>*</span>
-               </label>
-               <select
-                  name='countries'
-                  id='countries'
-                  {...register('countries', { required: true })}
-               >
-                  <option value='france'>France</option>
-                  <option value='england'>England</option>
-                  <option value='us'>US</option>
-                  <option value='brasil'>Brasil</option>
-               </select>
+            <div className='form-elements'>
+      
+               <Select selectable={towns} value={value} setValue={setValue} />
                {/* <img src={iconDown} alt='' className='icon-down' /> */}
             </div>
-            <div>
+
+            <div className='form-elements'>
                <label htmlFor='username'>
                   Name <span className='asterix'>*</span>
                </label>
@@ -81,7 +91,7 @@ const Form = () => {
                />
                {/* {errors.username && <span>{errors.username?.message}</span>} */}
             </div>
-            <div>
+            <div className='form-elements'>
                <label>
                   Mail address <span className='asterix'>*</span>
                </label>
@@ -96,7 +106,7 @@ const Form = () => {
                   })}
                />
             </div>
-            <div data-tippy-content='Enter your message!'>
+            <div className='form-elements'>
                <label>
                   Message <span className='asterix'>*</span>
                </label>
@@ -111,11 +121,7 @@ const Form = () => {
                   })}
                ></textarea>
             </div>
-            <button
-               data-tippy-content='Send your message!'
-               type='submit'
-               value='Send'
-            >
+            <button type='submit' value='Send'>
                <span>Send</span>
             </button>
          </form>

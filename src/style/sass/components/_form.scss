@@ -27,11 +27,7 @@
       width: 350px;
       margin: 0 auto;
    }
-   & div {
-      display: flex;
-      flex-direction: column;
-      text-align: start;
-   }
+
    label {
       display: flex;
       align-items: center;
@@ -42,7 +38,7 @@
       margin-left: 5px;
       font-size: 14px;
    }
-   & select,
+   & .select,
    input,
    textarea,
    button {
@@ -54,34 +50,14 @@
       background: transparent;
       border: 1px solid variables.$clr-white;
    }
-   & select {
-      color: variables.$clr-white;
-      font-size: 14px;
-      /* for Firefox */
-      -moz-appearance: none;
-      /* for Chrome */
-      -webkit-appearance: none;
-   }
-   /* For IE10 */
-   & select::-ms-expand {
-      display: none;
-   }
 
-   & select:hover,
-   input:hover,
-   textarea:hover,
-   button:hover {
-      border: 1px solid variables.$clr-primary;
-   }
-   & select:focus,
-   input:focus,
+   & input:focus,
    textarea:focus,
    button:focus {
-      border: 1px solid variables.$clr-primary;;
+      border: 1px solid variables.$clr-primary;
    }
-   
-   & select::placeholder,
-   input::placeholdert,
+
+   & input::placeholdert,
    textarea::placeholder {
       font-size: 14px;
    }
@@ -97,6 +73,7 @@
       width: 240px;
       height: 57px;
       margin: 10px auto 0;
+      cursor: pointer;
       & span {
          text-transform: uppercase;
          font-size: 18px;
@@ -116,16 +93,9 @@
       font-size: 14px;
    }
 }
-
-
-.select-container {
+.form-elements {
+   display: flex;
+   flex-direction: column;
+   width: 100%;
    position: relative;
-}
-
-.icon-down {
-   position: absolute;
-   left: 10px;
-   bottom: 45px;
-   height: 20px;
-   width: 20px;
 }
