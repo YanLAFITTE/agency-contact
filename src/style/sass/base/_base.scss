@@ -32,3 +32,6 @@ body {
    color: variables.$clr-black;
 }
 
+body::-webkit-scrollbar {
+   display: none;
+}

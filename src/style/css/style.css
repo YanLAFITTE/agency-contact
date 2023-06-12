@@ -354,6 +354,10 @@ body {
   color: #000;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 /* Layout page */
 .layout {
   display: flex;
@@ -555,6 +559,9 @@ header {
     width: 100vw;
     height: 250px;
   }
+}
+.slider img {
+  cursor: zoom-in;
 }
 
 .map {

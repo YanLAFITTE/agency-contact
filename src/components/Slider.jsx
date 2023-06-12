@@ -5,6 +5,7 @@ import picture1 from '../assets/photo1.jpg';
 import picture2 from '../assets/photo2.jpg';
 import picture3 from '../assets/photo3.jpg';
 import { useEffect, useRef } from 'react';
+import Fancybox from '../components/Fancybox';
 
 // register Swiper custom elements
 register();
@@ -101,17 +102,31 @@ const Slider = () => {
 
    return (
       <div className='slider'>
-         <swiper-container ref={swiperRef} init='false'>
-            <swiper-slide>
-               <img src={picture1} alt='' />
-            </swiper-slide>
-            <swiper-slide>
-               <img src={picture2} alt='' />
-            </swiper-slide>
-            <swiper-slide>
-               <img src={picture3} alt='' />
-            </swiper-slide>
-         </swiper-container>
+         <Fancybox
+            options={{
+               Carousel: {
+                  infinite: false,
+               },
+            }}
+         >
+            <swiper-container ref={swiperRef} init='false'>
+               <swiper-slide>
+                  <a href={picture1} data-fancybox='gallery'>
+                     <img src={picture1} alt='' />
+                  </a>
+               </swiper-slide>
+               <swiper-slide>
+                  <a href={picture2} data-fancybox='gallery'>
+                     <img src={picture2} alt='' />
+                  </a>
+               </swiper-slide>
+               <swiper-slide>
+                  <a href={picture3} data-fancybox='gallery'>
+                     <img src={picture3} alt='' />
+                  </a>
+               </swiper-slide>
+            </swiper-container>
+         </Fancybox>
       </div>
    );
 };
