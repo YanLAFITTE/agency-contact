@@ -18,6 +18,7 @@ const Slider = () => {
       const params = {
          navigation: true,
          pagination: true,
+         speed: 800,
          loop: true,
          injectStyles: [
             `
@@ -101,14 +102,14 @@ const Slider = () => {
    }, []);
 
    return (
-      <div className='slider'>
-         <Fancybox
-            options={{
-               Carousel: {
-                  infinite: false,
-               },
-            }}
-         >
+      <Fancybox
+         options={{
+            Carousel: {
+               infinite: false,
+            },
+         }}
+      >
+         <div className='slider'>
             <swiper-container ref={swiperRef} init='false'>
                <swiper-slide>
                   <a href={picture1} data-fancybox='gallery'>
@@ -126,8 +127,8 @@ const Slider = () => {
                   </a>
                </swiper-slide>
             </swiper-container>
-         </Fancybox>
-      </div>
+         </div>
+      </Fancybox>
    );
 };
 
