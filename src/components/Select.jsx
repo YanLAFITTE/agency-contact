@@ -7,7 +7,9 @@ const Select = ({ countries, countryValue, setCountryValue }) => {
       setCountryValue(countryName);
    };
    const onBtn = () => {
-      setOpen((prevOpen) => !prevOpen);
+      if (countries.length > 0) {
+         setOpen((prevOpen) => !prevOpen);
+      }
    };
    return (
       <>
@@ -27,30 +29,29 @@ const Select = ({ countries, countryValue, setCountryValue }) => {
 
          {open && (
             <div className='content'>
-               {countries.length &&
-                  countries.map((countryObj, id) => {
-                     return (
-                        <div
-                           className='country-container'
-                           key={id}
-                           onClick={() => {
-                              onElementClicked(countryObj.name.common);
-                              onBtn();
-                           }}
-                        >
-                           <div className='country-name'>
-                              {countryObj.name.common}
-                           </div>
-                           <div>
-                              <img
-                                 src={countryObj.flags?.svg}
-                                 alt='arrow down'
-                                 height='20px'
-                              />
-                           </div>
+               {countries.map((countryObj, id) => {
+                  return (
+                     <div
+                        className='country-container'
+                        key={id}
+                        onClick={() => {
+                           onElementClicked(countryObj.name.common);
+                           onBtn();
+                        }}
+                     >
+                        <div className='country-name'>
+                           {countryObj.name.common}
                         </div>
-                     );
-                  })}
+                        <div>
+                           <img
+                              src={countryObj.flags?.svg}
+                              alt='arrow down'
+                              height='20px'
+                           />
+                        </div>
+                     </div>
+                  );
+               })}
             </div>
          )}
       </>

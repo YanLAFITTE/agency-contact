@@ -16,13 +16,14 @@ const Slider = () => {
    useEffect(() => {
       const swiperContainer = swiperRef.current;
       const params = {
+         spaceBetween: 0,
          navigation: true,
          pagination: true,
-         speed: 800,
+         speed: 600,
          loop: true,
          injectStyles: [
             `
-            .swiper-slide-active img {
+            .swiper-slide-active img  {
                width: 100%;
                height: 420px;
                object-fit: cover;
@@ -102,33 +103,33 @@ const Slider = () => {
    }, []);
 
    return (
-      <Fancybox
-         options={{
-            Carousel: {
-               infinite: false,
-            },
-         }}
-      >
-         <div className='slider'>
+      <div className='slider'>
+         <Fancybox
+            options={{
+               Carousel: {
+                  infinite: false,
+               },
+            }}
+         >
             <swiper-container ref={swiperRef} init='false'>
                <swiper-slide>
                   <a href={picture1} data-fancybox='gallery'>
-                     <img src={picture1} alt='' />
+                     <img src={picture1} alt='open-space' />
                   </a>
                </swiper-slide>
                <swiper-slide>
                   <a href={picture2} data-fancybox='gallery'>
-                     <img src={picture2} alt='' />
+                     <img src={picture2} alt='co-working' />
                   </a>
                </swiper-slide>
                <swiper-slide>
                   <a href={picture3} data-fancybox='gallery'>
-                     <img src={picture3} alt='' />
+                     <img src={picture3} alt='salle de reunion' />
                   </a>
                </swiper-slide>
             </swiper-container>
-         </div>
-      </Fancybox>
+         </Fancybox>
+      </div>
    );
 };
 

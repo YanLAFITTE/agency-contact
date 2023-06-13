@@ -30,6 +30,9 @@
          width: 100vw;
          height: 330px;
       }
+      @media #{variables.$small-down} {
+         padding: 0 25px;
+      }
 
       h2 {
          font-size: 28px;
@@ -118,6 +121,9 @@
          padding: 0 50px;
          width: 100vw;
          height: 360px;
+      }
+      @media #{variables.$small-down} {
+         padding: 0 25px;
       }
       h2 {
          font-size: 28px;

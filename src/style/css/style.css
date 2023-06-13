@@ -404,6 +404,11 @@ header {
     position: fixed;
   }
 }
+@media only screen and (max-width: 480px) {
+  .header__logo {
+    left: 25px;
+  }
+}
 .header__logo img {
   width: 172px;
   height: 200px;
@@ -493,6 +498,11 @@ header {
   }
   .header__mobile.fixed {
     position: fixed;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .header__mobile {
+    right: 25px;
   }
 }
 .header__mobile h2 {
@@ -616,6 +626,11 @@ a[href^="https://www.google.com/maps"] {
   width: 350px;
   margin: 0 auto;
 }
+@media only screen and (max-width: 480px) {
+  .form-container form {
+    width: 300px;
+  }
+}
 .form-container label {
   display: flex;
   align-items: center;
@@ -654,6 +669,7 @@ a[href^="https://www.google.com/maps"] {
 }
 .form-container textarea {
   height: 114px;
+  resize: none;
 }
 .form-container button {
   background: #fff;
@@ -678,8 +694,8 @@ a[href^="https://www.google.com/maps"] {
   font-size: 26px;
 }
 .form-container p {
-  margin-bottom: 50px;
-  margin-top: 20px;
+  margin: 20px 0 50px;
+  padding: 0 25px;
   line-height: 1.6;
   font-size: 14px;
 }
@@ -806,6 +822,11 @@ a[href^="https://www.google.com/maps"] {
     height: 330px;
   }
 }
+@media only screen and (max-width: 480px) {
+  .contact-section1__infos {
+    padding: 0 25px;
+  }
+}
 .contact-section1__infos h2 {
   font-size: 28px;
   margin: 90px 0 30px 5px;
@@ -907,6 +928,11 @@ a[href^="https://www.google.com/maps"] {
     padding: 0 50px;
     width: 100vw;
     height: 360px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .contact-section2__infos {
+    padding: 0 25px;
   }
 }
 .contact-section2__infos h2 {

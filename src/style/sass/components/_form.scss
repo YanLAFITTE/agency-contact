@@ -26,6 +26,9 @@
       justify-content: space-between;
       width: 350px;
       margin: 0 auto;
+      @media #{variables.$small-down} {
+         width: 300px;
+      }
    }
 
    label {
@@ -68,6 +71,7 @@
    }
    & textarea {
       height: 114px;
+      resize: none;
    }
    & button {
       background: variables.$clr-white;
@@ -88,8 +92,8 @@
       font-size: 26px;
    }
    & p {
-      margin-bottom: 50px;
-      margin-top: 20px;
+      margin: 20px 0 50px;
+      padding: 0 25px;
       line-height: 1.6;
       font-size: 14px;
    }

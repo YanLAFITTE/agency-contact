@@ -4,10 +4,7 @@ import openMenuSvg from '../assets/open-menu.svg';
 import closeMenuSvg from '../assets/close-menu.svg';
 import { useState } from 'react';
 
-/**
- *
- * @returns main navigation
- */
+
 
 const MainNavigation = () => {
    const [toggleNav, settoggleNav] = useState(false);
@@ -100,13 +97,13 @@ const MainNavigation = () => {
                {toggleNav ? (
                   <img
                      src={closeMenuSvg}
-                     alt='close menu icon'
+                     alt='icon menu fermeture'
                      onClick={handleToggle}
                   />
                ) : (
                   <img
                      src={openMenuSvg}
-                     alt='open menu icon'
+                     alt='icon menu ouverture'
                      onClick={handleToggle}
                   />
                )}

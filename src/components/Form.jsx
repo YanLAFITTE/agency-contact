@@ -9,6 +9,16 @@ const Form = () => {
    const [countryValue, setCountryValue] = useState('France');
    const [countries, setCountries] = useState([]);
 
+   countries.sort(function (a, b) {
+      if (a.name.common < b.name.common) {
+         return -1;
+      }
+      if (a.name.common > b.name) {
+         return 1;
+      }
+      return 0;
+   });
+
    const {
       register,
       handleSubmit,

@@ -17,7 +17,12 @@ const Contact = () => {
                      debitis at deserunt possimus nisi itaque.
                   </p>
                   <div className='contact-section1__phone'>
-                     <img src={phoneSvg} alt='' height='35px' width='35px' />
+                     <img
+                        src={phoneSvg}
+                        alt='icone de téléphone'
+                        height='35px'
+                        width='35px'
+                     />
                      <h3>05 59 20 90 50</h3>
                   </div>
                </div>
@@ -39,7 +44,7 @@ const Contact = () => {
                      nihil hic corrupti?
                   </p>
                   <h3>
-                     33 avenue de l'Aquitaine
+                     33 avenue de l{"'"}Aquitaine
                      <br />
                      64100 Bayonne
                   </h3>

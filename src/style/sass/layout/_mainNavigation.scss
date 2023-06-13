@@ -28,6 +28,9 @@ header {
             position: fixed;
          }
       }
+      @media #{variables.$small-down}{
+         left: 25px;
+      }
       img {
          width: 172px;
          height: 200px;
@@ -101,6 +104,9 @@ header {
          &.fixed {
             position: fixed;
          }
+      }
+      @media #{variables.$small-down} {
+         right: 25px;
       }
       h2 {
          font-family: variables.$font-headings;
