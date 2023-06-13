@@ -38,7 +38,11 @@ const Map = () => {
                <MarkerF icon={icon} position={agencyCoords} />
 
                <MarkerF
-                  label={{ text: 'LITTLE BAYONNE', fontSize: '14px' }}
+                  label={{
+                     text: 'LITTLE BAYONNE',
+                     fontSize: '14px',
+                     fontWeight: '500',
+                  }}
                   position={littleBaionaCoords}
                   icon={iconTransparent}
                />

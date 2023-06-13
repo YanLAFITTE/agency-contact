@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import down from '../assets/arrow-drop-down.svg';
+import PropTypes from 'prop-types';
+import arrowDrop from '../assets/arrow-drop-down.svg';
 
 const Select = ({ countries, countryValue, setCountryValue }) => {
    const [open, setOpen] = useState(false);
@@ -7,9 +8,8 @@ const Select = ({ countries, countryValue, setCountryValue }) => {
       setCountryValue(countryName);
    };
    const onBtn = () => {
-      if (countries.length > 0) {
-         setOpen((prevOpen) => !prevOpen);
-      }
+      if (countries.length === 0) return;
+      setOpen((prevOpen) => !prevOpen);
    };
    return (
       <>
@@ -22,7 +22,7 @@ const Select = ({ countries, countryValue, setCountryValue }) => {
             onClick={() => onBtn()}
          >
             <div>
-               <img src={down} className={open ? 'rotate-arrow' : ''} />
+               <img src={arrowDrop} className={open ? 'rotate-arrow' : ''} />
             </div>
             <div className='value'>{countryValue}</div>
          </div>
@@ -44,7 +44,7 @@ const Select = ({ countries, countryValue, setCountryValue }) => {
                         </div>
                         <div>
                            <img
-                              src={countryObj.flags?.svg}
+                              src={countryObj.flags.svg}
                               alt='arrow down'
                               height='20px'
                            />
@@ -56,6 +56,12 @@ const Select = ({ countries, countryValue, setCountryValue }) => {
          )}
       </>
    );
+};
+
+Select.propTypes = {
+   countries: PropTypes.array.isRequired,
+   countryValue: PropTypes.string.isRequired,
+   setCountryValue: PropTypes.func.isRequired,
 };
 
 export default Select;

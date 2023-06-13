@@ -1,6 +1,6 @@
 import phoneSvg from '../assets/phone.svg';
 import Slider from '../components/Slider';
-import localisationJpg from '../assets/localisation.jpg';
+import localisationJpg from '../assets/images/localisation.jpg';
 import Map from '../components/Map';
 import Form from '../components/Form';
 
@@ -10,11 +10,11 @@ const Contact = () => {
          <section className='contact-section1'>
             <div className='contact-section1__container'>
                <div className='contact-section1__infos'>
-                  <h2>How to contact us</h2>
+                  <h3>How to contact us</h3>
                   <p>
-                     Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                     Cupiditate, similique voluptate. Ex delectus incidunt
-                     debitis at deserunt possimus nisi itaque.
+                     rem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                     do eiusmod tempor incididunt ut labore et dolore magna
+                     aliqua. Ut enim ad minim veniam, quis nostru
                   </p>
                   <div className='contact-section1__phone'>
                      <img
@@ -23,7 +23,7 @@ const Contact = () => {
                         height='35px'
                         width='35px'
                      />
-                     <h3>05 59 20 90 50</h3>
+                     <h2>05 59 20 90 50</h2>
                   </div>
                </div>
                <Slider />
@@ -37,17 +37,17 @@ const Contact = () => {
                   className='contact-section2__back'
                />
                <div className='contact-section2__infos'>
-                  <h2>How to find us</h2>
+                  <h3>How to find us</h3>
                   <p>
-                     Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                     Animi ut sunt unde eveniet saepe vitae enim obcaecati,
-                     nihil hic corrupti?
+                     rem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                     do eiusmod tempor incididunt ut labore et dolore magna
+                     aliqua. Ut enim ad minim veniam, quis nostru
                   </p>
-                  <h3>
+                  <h2>
                      33 avenue de l{"'"}Aquitaine
                      <br />
                      64100 Bayonne
-                  </h3>
+                  </h2>
                </div>
                <Map />
             </section>

@@ -1,11 +1,12 @@
 // import function to register Swiper custom elements
 import { register } from 'swiper/element/bundle';
 
-import picture1 from '../assets/photo1.jpg';
-import picture2 from '../assets/photo2.jpg';
-import picture3 from '../assets/photo3.jpg';
+import picture1 from '../assets/images/photo1.jpg';
+import picture2 from '../assets/images/photo2.jpg';
+import picture3 from '../assets/images/photo3.jpg';
 import { useEffect, useRef } from 'react';
 import Fancybox from '../components/Fancybox';
+import chevron from '../assets/chevron.svg';
 
 // register Swiper custom elements
 register();
@@ -35,12 +36,7 @@ const Slider = () => {
                width: 100%;
                height: 420px;
             }
-            
-            @media (max-width: 992px) {
-               .swiper-slide-active img, .swiper-slide-active, .swiper-initialized {
-               height: 250px;
-            }}
-            
+   
             .swiper-button-next,
             .swiper-button-prev {  
               background-image:  linear-gradient(90deg, #ed1e79, #6d0063);
@@ -53,32 +49,33 @@ const Slider = () => {
             }
 
             .swiper-button-next {
-              right: 6%;
+              right: 8%;
             } 
 
             .swiper-button-prev {
-              left: 6%;
+              left: 8%;
             }  
 
             .swiper-button-next::after,
             .swiper-button-prev::after {
               content: '';
-              background-image:  url('./src/assets/chevron-white.png');
+              background-image:  url(${chevron});
               background-repeat: no-repeat;
-              background-size: 22px;
-              height: 22px;
-              width: 22px;
+              background-size: 29px;
+              height: 29px;
+              width: 29px;
               color: #fff;
               position: absolute;
+              opacity: 0.6;
             }
 
             .swiper-button-next::after {
-              transform: rotate(180deg);
-              left: 22px; 
+              left: 19px;
             }
 
             .swiper-button-prev::after {
-              right: 22px; 
+              transform: rotate(180deg);
+              right: 19px; 
             }
 
             .swiper-pagination {
@@ -91,9 +88,41 @@ const Slider = () => {
               background: #fff;
               opacity: 1 ;
             }
+
             .swiper-pagination-bullet-active {
               background: #ed1e79;
           }
+
+          @media (max-width: 992px) {
+
+            .swiper-slide-active img, 
+            .swiper-slide-active, 
+            .swiper-initialized {
+               height: 250px;
+            }
+
+            .swiper-button-next,
+            .swiper-button-prev {
+               height: 50px;
+               width: 50px;
+            }
+
+            .swiper-button-next::after {
+               left: 16px;
+               background-size: 24px;
+               height: 24px;
+            }
+
+            .swiper-button-prev::after {
+               right: 16px;
+               background-size: 24px;
+               height: 24px;
+            }
+
+            .swiper-pagination {
+               margin-bottom: 10px;
+             }
+         }
           `,
          ],
       };

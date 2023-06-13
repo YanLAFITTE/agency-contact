@@ -1,4 +1,5 @@
 import { useRef, useEffect } from 'react';
+import PropTypes from 'prop-types';
 
 import { Fancybox as NativeFancybox } from '@fancyapps/ui';
 import '@fancyapps/ui/dist/fancybox/fancybox.css';
@@ -21,6 +22,12 @@ const Fancybox = (props) => {
    });
 
    return <div ref={containerRef}>{props.children}</div>;
+};
+
+Fancybox.propTypes = {
+   delegate: PropTypes.string,
+   options: PropTypes.object.isRequired,
+   children: PropTypes.object.isRequired,
 };
 
 export default Fancybox;

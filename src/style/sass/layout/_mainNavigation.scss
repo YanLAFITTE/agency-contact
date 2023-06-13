@@ -1,6 +1,8 @@
 @use '../abstract/_variables';
 @use '../abstract/_mixins';
 
+/* Header */
+
 header {
    width: 100vw;
    z-index: 10;
@@ -28,7 +30,7 @@ header {
             position: fixed;
          }
       }
-      @media #{variables.$small-down}{
+      @media #{variables.$small-down} {
          left: 25px;
       }
       img {
@@ -45,21 +47,23 @@ header {
       display: grid;
       grid-template-columns: 1fr 1fr;
       padding: 0 190px;
-      gap: 35%;
+      gap: 30%;
       @media #{variables.$xlscreen-down} {
          gap: 22%;
-         padding: 0 40px;
+         padding: 0 50px;
       }
       @media #{variables.$large-down} {
          display: none;
          flex-direction: column;
-         gap: 20px;
+         gap: 0;
          position: fixed;
          background-image: url('../../assets/texture.png');
          background-repeat: cover;
          padding: 230px 0 20%;
          &.display {
             display: flex;
+            align-items: center;
+            justify-content: center;
          }
       }
       .nav-left,
@@ -68,10 +72,22 @@ header {
          display: flex;
          align-items: center;
          justify-content: space-between;
+         max-width: 450px;
+         width: 100%;
          @media #{variables.$large-down} {
             flex-direction: column;
-            height: 50%;
+            max-width: 100%;
+            padding: 0;
+            & a {
+               margin-top: 5%;
+            }
          }
+      }
+      .nav-left a:nth-child(1) {
+         margin-top: 0;
+      }
+      .nav-right {
+         margin-left: auto;
       }
       .navlink {
          white-space: nowrap;

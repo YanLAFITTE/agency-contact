@@ -9,15 +9,19 @@ const Form = () => {
    const [countryValue, setCountryValue] = useState('France');
    const [countries, setCountries] = useState([]);
 
-   countries.sort(function (a, b) {
-      if (a.name.common < b.name.common) {
-         return -1;
-      }
-      if (a.name.common > b.name) {
-         return 1;
-      }
-      return 0;
-   });
+   const sortCountries = (countries) => {
+      countries.sort(function (a, b) {
+         if (a.name.common < b.name.common) {
+            return -1;
+         }
+         if (a.name.common > b.name) {
+            return 1;
+         }
+         return 0;
+      });
+   };
+
+   sortCountries(countries);
 
    const {
       register,
@@ -30,6 +34,7 @@ const Form = () => {
          message: '',
       },
    });
+
 
    const onSubmit = (data, e) => {
       const newData = {
@@ -79,8 +84,8 @@ const Form = () => {
       <div className='form-container'>
          <h2>Drop us a line</h2>
          <p>
-            ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse{' '}
-            <br /> lectus tortor, dignissim sit amet, adipiscing nec dolor.
+            Ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua.
          </p>
          <form onSubmit={handleSubmit(onSubmit)}>
             <div className='form-elements'>
@@ -89,7 +94,6 @@ const Form = () => {
                   countryValue={countryValue}
                   setCountryValue={setCountryValue}
                />
-               {/* <img src={iconDown} alt='' className='icon-down' /> */}
             </div>
 
             <div className='form-elements'>
@@ -105,6 +109,7 @@ const Form = () => {
                      {...register('username', {
                         required: true,
                         minLength: { value: 4, message: 'Min lenth is 4' },
+                        maxLength: 20,
                      })}
                   />
                </Tippy>
@@ -138,8 +143,9 @@ const Form = () => {
                      id='message'
                      placeholder='Drop us a line'
                      {...register('message', {
-                        required: 'This is required!',
+                        required: true,
                         minLength: { value: 4, message: 'Min lenth is 4' },
+                        maxLength: 400,
                      })}
                   ></textarea>
                </Tippy>
