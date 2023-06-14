@@ -1,8 +1,10 @@
+import { lazy } from 'react';
 import phoneSvg from '../assets/phone.svg';
-import Slider from '../components/Slider';
-import localisationJpg from '../assets/images/localisation.jpg';
-import Map from '../components/Map';
-import Form from '../components/Form';
+import localisationJpg from '../assets/images/localisation.webp';
+
+const Slider = lazy(() => import('../components/Slider'));
+const Map = lazy(() => import('../components/Map'));
+const Form = lazy(() => import('../components/Form'));
 
 const Contact = () => {
    return (
@@ -10,7 +12,7 @@ const Contact = () => {
          <section className='contact-section1'>
             <div className='contact-section1__container'>
                <div className='contact-section1__infos'>
-                  <h3>How to contact us</h3>
+                  <h1>How to contact us</h1>
                   <p>
                      rem ipsum dolor sit amet, consectetur adipisicing elit, sed
                      do eiusmod tempor incididunt ut labore et dolore magna
@@ -19,7 +21,7 @@ const Contact = () => {
                   <div className='contact-section1__phone'>
                      <img
                         src={phoneSvg}
-                        alt='icone de téléphone'
+                        alt='phone icon'
                         height='35px'
                         width='35px'
                      />
@@ -33,8 +35,10 @@ const Contact = () => {
             <section className='contact-section2'>
                <img
                   src={localisationJpg}
-                  alt='rue de nuit, eclairée par un lampadaire'
+                  alt='street at night, lit by a lamppost'
                   className='contact-section2__back'
+                  height='600px'
+                  width='950px'
                />
                <div className='contact-section2__infos'>
                   <h3>How to find us</h3>

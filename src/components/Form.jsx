@@ -1,9 +1,10 @@
-import emailjs from '@emailjs/browser';
+import { useEffect, useState, lazy } from 'react';
 import { useForm } from 'react-hook-form';
-import Select from '../components/Select';
-import { useEffect, useState } from 'react';
+import emailjs from '@emailjs/browser';
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
+
+const Select = lazy(() => import('../components/Select'));
 
 const Form = () => {
    const [countryValue, setCountryValue] = useState('France');
@@ -34,7 +35,6 @@ const Form = () => {
          message: '',
       },
    });
-
 
    const onSubmit = (data, e) => {
       const newData = {
@@ -93,6 +93,7 @@ const Form = () => {
                   countries={countries}
                   countryValue={countryValue}
                   setCountryValue={setCountryValue}
+                  register={register}
                />
             </div>
 
@@ -100,7 +101,7 @@ const Form = () => {
                <label htmlFor='username'>
                   Name <span className='asterix'>*</span>
                </label>
-               <Tippy content='Fill with your name'>
+               <Tippy content='Fill with your name' className='tippy'>
                   <input
                      type='text'
                      name='username'
@@ -116,10 +117,10 @@ const Form = () => {
                {/* {errors.username && <span>{errors.username?.message}</span>} */}
             </div>
             <div className='form-elements'>
-               <label>
+               <label htmlFor='email'>
                   Mail address <span className='asterix'>*</span>
                </label>
-               <Tippy content='Fill with your email'>
+               <Tippy content='Fill with your email' className='tippy'>
                   <input
                      type='email'
                      name='email'
@@ -133,10 +134,10 @@ const Form = () => {
                </Tippy>
             </div>
             <div className='form-elements'>
-               <label>
+               <label htmlFor='message'>
                   Message <span className='asterix'>*</span>
                </label>
-               <Tippy content='Fill with your message'>
+               <Tippy content='Fill with your message' className='tippy'>
                   <textarea
                      type='textarea'
                      name='message'

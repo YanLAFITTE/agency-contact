@@ -1,10 +1,8 @@
-import { NavLink, Link } from 'react-router-dom';
+import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import logo from '../assets/logo.svg';
 import openMenuSvg from '../assets/open-menu.svg';
 import closeMenuSvg from '../assets/close-menu.svg';
-import { useState } from 'react';
-
-
 
 const MainNavigation = () => {
    const [toggleNav, settoggleNav] = useState(false);
@@ -17,9 +15,10 @@ const MainNavigation = () => {
       <header>
          <div className='header'>
             <div className={toggleNav ? 'header__logo fixed' : 'header__logo'}>
-               <Link to='/' onClick={handleToggle}>
-                  <img src={logo} alt='agency logo' />
-               </Link>
+               <img
+                  src={logo}
+                  alt='round pink and purple degrader that blows bubbles containing an A in the shape of a triangle'
+               />
             </div>
             <nav
                className={toggleNav ? 'header__nav display' : ' header__nav '}

@@ -11,8 +11,8 @@ header {
 .header {
    height: 430px;
    position: relative;
-   background-image: url('../../assets/texture.png');
-   background-repeat: cover;
+   background-image: url('../../assets/texture.webp');
+   object-fit: cover;
    @media #{variables.$large-down} {
       height: 220px;
    }
@@ -57,7 +57,7 @@ header {
          flex-direction: column;
          gap: 0;
          position: fixed;
-         background-image: url('../../assets/texture.png');
+         background-image: url('../../assets/texture.webp');
          background-repeat: cover;
          padding: 230px 0 20%;
          &.display {

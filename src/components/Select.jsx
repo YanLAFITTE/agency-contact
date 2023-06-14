@@ -13,16 +13,19 @@ const Select = ({ countries, countryValue, setCountryValue }) => {
    };
    return (
       <>
-         <label htmlFor='countries'>
+         <div className='label'>
             Choose your country <span className='asterix'>*</span>
-         </label>
-
+         </div>
          <div
             className={open ? 'select border' : 'select'}
             onClick={() => onBtn()}
          >
             <div>
-               <img src={arrowDrop} className={open ? 'rotate-arrow' : ''} />
+               <img
+                  src={arrowDrop}
+                  className={open ? 'rotate-arrow' : ''}
+                  alt='drop-down menu icon'
+               />
             </div>
             <div className='value'>{countryValue}</div>
          </div>
@@ -45,7 +48,7 @@ const Select = ({ countries, countryValue, setCountryValue }) => {
                         <div>
                            <img
                               src={countryObj.flags.svg}
-                              alt='arrow down'
+                              alt='Flag'
                               height='20px'
                            />
                         </div>
