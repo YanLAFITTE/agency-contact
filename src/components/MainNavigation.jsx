@@ -98,12 +98,16 @@ const MainNavigation = () => {
                      src={closeMenuSvg}
                      alt='icon menu fermeture'
                      onClick={handleToggle}
+                     width='35px'
+                     height='35px'
                   />
                ) : (
                   <img
                      src={openMenuSvg}
                      alt='icon menu ouverture'
                      onClick={handleToggle}
+                     width='35px'
+                     height='35px'
                   />
                )}
                <h2>Menu</h2>

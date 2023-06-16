@@ -1,10 +1,12 @@
-import { lazy } from 'react';
+import { Suspense, lazy } from 'react';
 import phoneSvg from '../assets/phone.svg';
 import localisationJpg from '../assets/images/localisation.webp';
 
 const Slider = lazy(() => import('../components/Slider'));
 const Map = lazy(() => import('../components/Map'));
 const Form = lazy(() => import('../components/Form'));
+
+const renderLoader = () => <p>Loading...</p>;
 
 const Contact = () => {
    return (
@@ -53,7 +55,9 @@ const Contact = () => {
                      64100 Bayonne
                   </h2>
                </div>
-               <Map />
+               <Suspense fallback={renderLoader()}>
+                  <Map />
+               </Suspense>
             </section>
             <section className='contact-form'>
                <Form />

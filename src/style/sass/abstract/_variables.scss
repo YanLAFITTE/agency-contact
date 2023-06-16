@@ -10,22 +10,23 @@ $clr-star: #e3e3e3;
 
 @font-face {
    font-family: 'PermanentMarker';
-   src: url(/src/assets/fonts/permanent-marker/PermanentMarker.ttf);
+   src: url(/src/assets/fonts/permanent-marker/PermanentMarker.woff);
+   font-display: swap;
 }
 @font-face {
    font-family: 'Roboto-Regular';
-   src: url(/src/assets/fonts/Roboto/Roboto-Regular.ttf);
+   src: url(/src/assets/fonts/Roboto/Roboto-Regular.woff);
+   font-display: swap;
 }
 @font-face {
    font-family: 'Roboto-Medium';
-   src: url(/src/assets/fonts/Roboto/Roboto-Medium.ttf);
+   src: url(/src/assets/fonts/Roboto/Roboto-Medium.woff);
+   font-display: swap;
 }
-
 
 $font-headings: 'PermanentMarker';
 $font-text-regular: 'Roboto-Regular';
 $font-text-medium: 'Roboto-Medium';
-
 
 // Transition
 

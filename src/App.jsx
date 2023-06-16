@@ -13,11 +13,6 @@ import Work from './pages/Work';
 import Team from './pages/Team';
 import Localisation from './pages/Localisation';
 
-/**  Create a router constant whith react-router-dom 6.4.5 version
- *   React-router-dom provides conventional data loading hooks to initiate data loading during a navigation
- *   The "loader" function sends the data to the page
- */
-
 const router = createBrowserRouter(
    createRoutesFromElements(
       <Route path='/' element={<RootLayout />} errorElement={<ErrorPage />}>
@@ -30,8 +25,6 @@ const router = createBrowserRouter(
       </Route>
    )
 );
-
-/**  Router constant is added to the router provider which is export */
 
 const App = () => {
    return <RouterProvider router={router} />;
