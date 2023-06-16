@@ -25,6 +25,8 @@ const Select = ({ countries, countryValue, setCountryValue }) => {
                   src={arrowDrop}
                   className={open ? 'rotate-arrow' : ''}
                   alt='drop-down menu icon'
+                  height='15px'
+                  width='15px'
                />
             </div>
             <div className='value'>{countryValue}</div>
