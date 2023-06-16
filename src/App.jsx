@@ -22,11 +22,11 @@ const router = createBrowserRouter(
    createRoutesFromElements(
       <Route path='/' element={<RootLayout />} errorElement={<ErrorPage />}>
          <Route index element={<Agency />} />
-         <Route path='whoarewe' element={<Whoarewe />} />
-         <Route path='work' element={<Work />} />
-         <Route path='team' element={<Team />} />
-         <Route path='localisation' element={<Localisation />} />
-         <Route path='contact' element={<Contact />} />
+         <Route path='/whoarewe' element={<Whoarewe />} />
+         <Route path='/work' element={<Work />} />
+         <Route path='/team' element={<Team />} />
+         <Route path='/localisation' element={<Localisation />} />
+         <Route path='/contact' element={<Contact />} />
       </Route>
    )
 );
