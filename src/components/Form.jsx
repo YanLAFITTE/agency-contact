@@ -87,48 +87,62 @@ const Form = () => {
             Ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
             tempor incididunt ut labore et dolore magna aliqua.
          </p>
-         <form onSubmit={handleSubmit(onSubmit)}>
+         <form onSubmit={handleSubmit(onSubmit)} noValidate>
             <div className='form-elements'>
                <Select
                   countries={countries}
                   countryValue={countryValue}
                   setCountryValue={setCountryValue}
-                  register={register}
                />
             </div>
-
             <div className='form-elements'>
                <label htmlFor='username'>
                   Name <span className='asterix'>*</span>
                </label>
-               <Tippy content='Fill with your name' className='tippy'>
+               <Tippy
+                  content={
+                     errors.username
+                        ? errors.username?.message
+                        : 'Fill with your name'
+                  }
+                  className='tippy'
+               >
                   <input
                      type='text'
                      name='username'
                      id='username'
                      placeholder='John Doe'
                      {...register('username', {
-                        required: true,
+                        required: { value: true, message: 'Name is required' },
                         minLength: { value: 4, message: 'Min lenth is 4' },
-                        maxLength: 20,
+                        maxLength: { value: 20, message: 'Max lenth is 20' },
                      })}
                   />
                </Tippy>
-               {/* {errors.username && <span>{errors.username?.message}</span>} */}
             </div>
             <div className='form-elements'>
                <label htmlFor='email'>
                   Mail address <span className='asterix'>*</span>
                </label>
-               <Tippy content='Fill with your email' className='tippy'>
+               <Tippy
+                  content={
+                     errors.email
+                        ? errors.email?.message
+                        : 'Fill with your email'
+                  }
+                  className='tippy'
+               >
                   <input
-                     type='email'
+                     type='text'
                      name='email'
                      id='email'
                      placeholder='johndoe@gmail.com'
                      {...register('email', {
-                        required: true,
-                        pattern: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/,
+                        required: { value: true, message: 'Email is required' },
+                        pattern: {
+                           value: /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+                           message: 'Fill a valid email',
+                        },
                      })}
                   />
                </Tippy>
@@ -137,16 +151,26 @@ const Form = () => {
                <label htmlFor='message'>
                   Message <span className='asterix'>*</span>
                </label>
-               <Tippy content='Fill with your message' className='tippy'>
+               <Tippy
+                  content={
+                     errors.message
+                        ? errors.message?.message
+                        : 'Fill with your message'
+                  }
+                  className='tippy'
+               >
                   <textarea
                      type='textarea'
                      name='message'
                      id='message'
                      placeholder='Drop us a line'
                      {...register('message', {
-                        required: true,
-                        minLength: { value: 4, message: 'Min lenth is 4' },
-                        maxLength: 400,
+                        required: {
+                           value: true,
+                           message: 'Message is required',
+                        },
+                        minLength: { value: 5, message: 'Min lenth is 5' },
+                        maxLength: { value: 400, message: 'Max lenth is 400' },
                      })}
                   ></textarea>
                </Tippy>
