@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Allow: /contact
+
+Sitemap: https://agency-app-three.vercel.app/sitemap.txt
