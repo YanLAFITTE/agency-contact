@@ -952,7 +952,6 @@ textarea:-webkit-autofill:focus {
   white-space: nowrap;
 }
 
-/* Contact Section 1 */
 .section2andform-container {
   display: flex;
 }
@@ -963,6 +962,7 @@ textarea:-webkit-autofill:focus {
   }
 }
 
+/* Contact Section 2 */
 .contact-section2 {
   position: relative;
   display: flex;

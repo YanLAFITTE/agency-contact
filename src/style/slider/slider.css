@@ -1,13 +1,12 @@
-.swiper-slide-active img {
-   width: 100%;
+.swiper-initialized {
    height: 420px;
-   object-fit: cover;
-   overflow: hidden;
-   object-position: bottom;
 }
 
-.swiper-initialized {
+.swiper-slide-prev img,
+.swiper-slide-next img,
+.swiper-slide-active img {
    width: 100%;
+   object-fit: cover;
    height: 420px;
 }
 
@@ -68,9 +67,13 @@
 }
 
 @media (max-width: 992px) {
-   .swiper-slide-active img,
-   .swiper-slide-active,
    .swiper-initialized {
+      height: 250px;
+   }
+
+   .swiper-slide-prev img,
+   .swiper-slide-next img,
+   .swiper-slide-active img {
       height: 250px;
    }
 

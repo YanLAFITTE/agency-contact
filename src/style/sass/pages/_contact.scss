@@ -78,8 +78,6 @@
    }
 }
 
-/* Contact Section 1 */
-
 .section2andform-container {
    display: flex;
    @media #{variables.$large-down} {
@@ -87,6 +85,8 @@
       margin-top: 1px;
    }
 }
+
+/* Contact Section 2 */
 
 .contact-section2 {
    position: relative;
