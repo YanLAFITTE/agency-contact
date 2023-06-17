@@ -1,0 +1,14 @@
+{
+   "name": "agency-app",
+   "short_name": "agency",
+   "start_url": "index.html",
+   "display": "standalone",
+   "theme_color": "#fff",
+   "background_color": "#fff",
+   "icons": [
+      {
+         "src": "/logo.ico",
+         "size": "224x256"
+      }
+   ]
+}
