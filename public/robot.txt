@@ -1,4 +1,4 @@
 user-agent: *
-disallow:
+allow: /*
 
 sitemap: https://agency-app-three.vercel.app/sitemap.txt
