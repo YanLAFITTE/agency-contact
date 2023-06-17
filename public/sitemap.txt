@@ -1,6 +1,2 @@
 https://agency-app-three.vercel.app/
-https://agency-app-three.vercel.app/whoarewe
-https://agency-app-three.vercel.app/work
-https://agency-app-three.vercel.app/team
-https://agency-app-three.vercel.app/localisation
 https://agency-app-three.vercel.app/contact
