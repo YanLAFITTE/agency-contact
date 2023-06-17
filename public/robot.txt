@@ -1,5 +1,4 @@
-User-agent: *
-Allow: /
-Allow: /contact
+user-agent: *
+disallow:
 
-Sitemap: https://agency-app-three.vercel.app/sitemap.txt
+sitemap: https://agency-app-three.vercel.app/sitemap.txt
