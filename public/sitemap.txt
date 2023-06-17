@@ -1,5 +1,4 @@
 https://agency-app-three.vercel.app/
-https://agency-app-three.vercel.app/agency
 https://agency-app-three.vercel.app/whoarewe
 https://agency-app-three.vercel.app/work
 https://agency-app-three.vercel.app/team
