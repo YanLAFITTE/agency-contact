@@ -33,7 +33,7 @@
 .swiper-button-next::after,
 .swiper-button-prev::after {
    content: '';
-   background-image: url('./src/assets/chevron.svg');
+   background-image: url('../../assets/chevron.svg');
    background-repeat: no-repeat;
    background-size: 29px;
    height: 29px;
