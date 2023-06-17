@@ -1,0 +1,98 @@
+.swiper-slide-active img {
+   width: 100%;
+   height: 420px;
+   object-fit: cover;
+   overflow: hidden;
+   object-position: bottom;
+}
+
+.swiper-initialized {
+   width: 100%;
+   height: 420px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+   background-image: linear-gradient(90deg, #ed1e79, #6d0063);
+   background-repeat: no-repeat;
+   height: 60px;
+   width: 60px;
+   border-radius: 50%;
+   position: absolute;
+   top: calc(50% - 8px);
+}
+
+.swiper-button-next {
+   right: 8%;
+}
+
+.swiper-button-prev {
+   left: 8%;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+   content: '';
+   background-image: url('./src/assets/chevron.svg');
+   background-repeat: no-repeat;
+   background-size: 29px;
+   height: 29px;
+   width: 29px;
+   color: #fff;
+   position: absolute;
+   opacity: 0.6;
+}
+
+.swiper-button-next::after {
+   left: 19px;
+}
+
+.swiper-button-prev::after {
+   transform: rotate(180deg);
+   right: 19px;
+}
+
+.swiper-pagination {
+   margin-bottom: 30px;
+}
+
+.swiper-pagination-bullet {
+   width: 10px;
+   height: 10px;
+   background: #fff;
+   opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+   background: #ed1e79;
+}
+
+@media (max-width: 992px) {
+   .swiper-slide-active img,
+   .swiper-slide-active,
+   .swiper-initialized {
+      height: 250px;
+   }
+
+   .swiper-button-next,
+   .swiper-button-prev {
+      height: 50px;
+      width: 50px;
+   }
+
+   .swiper-button-next::after {
+      left: 16px;
+      background-size: 24px;
+      height: 24px;
+   }
+
+   .swiper-button-prev::after {
+      right: 16px;
+      background-size: 24px;
+      height: 24px;
+   }
+
+   .swiper-pagination {
+      margin-bottom: 10px;
+   }
+}
