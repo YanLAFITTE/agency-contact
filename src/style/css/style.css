@@ -605,6 +605,36 @@ header {
   }
 }
 
+.baiona,
+.little-baiona {
+  letter-spacing: 4px;
+  font-weight: 500;
+  color: #000;
+}
+
+.baiona {
+  font-size: 18px;
+}
+@media only screen and (max-width: 992px) {
+  .baiona {
+    font-size: 11px;
+    letter-spacing: 2px;
+  }
+}
+
+.little-baiona {
+  font-size: 16px;
+  min-width: 200px;
+  text-transform: uppercase;
+}
+@media only screen and (max-width: 992px) {
+  .little-baiona {
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+  }
+}
+
 a[href^="http://maps.google.com/maps"],
 a[href^="https://maps.google.com/maps"],
 a[href^="https://www.google.com/maps"] {
@@ -639,6 +669,11 @@ a[href^="https://www.google.com/maps"] {
   width: 100%;
   padding: 110px 0 120px;
 }
+@media only screen and (max-width: 992px) {
+  .form-container {
+    padding-top: 65px;
+  }
+}
 .form-container form {
   height: 100%;
   display: flex;
@@ -665,13 +700,12 @@ a[href^="https://www.google.com/maps"] {
 }
 .form-container .select,
 .form-container input,
-.form-container textarea,
-.form-container button {
+.form-container textarea {
   margin-bottom: 30px;
   margin-top: 15px;
   height: 55px;
   border-radius: 10px;
-  padding: 18px 30px;
+  padding: 20px 30px;
   background: transparent;
   border: 1px solid #fff;
   transition: all 200ms ease;
@@ -699,9 +733,10 @@ a[href^="https://www.google.com/maps"] {
 }
 .form-container button {
   background: #fff;
+  border-radius: 10px;
   width: 240px;
   height: 57px;
-  margin: 10px auto 0;
+  margin: 5px auto 0;
   cursor: pointer;
   transition: all 200ms ease;
 }
@@ -723,12 +758,28 @@ a[href^="https://www.google.com/maps"] {
   font-family: "PermanentMarker";
   font-size: 26px;
 }
+@media only screen and (max-width: 992px) {
+  .form-container h2 {
+    font-size: 24px;
+  }
+}
 .form-container p {
   margin: 20px auto 50px;
   padding: 0 25px;
   line-height: 1.6;
   font-size: 14px;
   max-width: 460px;
+}
+@media only screen and (max-width: 992px) {
+  .form-container p {
+    margin-bottom: 65px;
+    padding: 0 30px;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .form-container .aliqua {
+    display: none;
+  }
 }
 
 .form-elements {

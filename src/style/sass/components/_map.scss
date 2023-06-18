@@ -11,6 +11,32 @@
    }
 }
 
+.baiona,
+.little-baiona {
+   letter-spacing: 4px;
+   font-weight: 500;
+   color: #000;
+}
+
+.baiona {
+   font-size: 18px;
+   @media #{variables.$large-down} {
+      font-size: 11px;
+      letter-spacing: 2px;
+   }
+}
+
+.little-baiona {
+   font-size: 16px;
+   min-width: 200px;
+   text-transform: uppercase;
+   @media #{variables.$large-down} {
+      font-size: 11px;
+      letter-spacing: 2px;
+      margin-bottom: 5px;
+   }
+}
+
 a[href^="http://maps.google.com/maps"],
 a[href^="https://maps.google.com/maps"],
 a[href^="https://www.google.com/maps"]
@@ -22,4 +48,3 @@ a[href^="https://www.google.com/maps"]
 .gmnoprint div {
    display: none;
 }
-

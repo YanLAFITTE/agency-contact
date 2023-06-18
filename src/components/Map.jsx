@@ -1,6 +1,10 @@
-import { GoogleMap, LoadScript, MarkerF } from '@react-google-maps/api';
+import {
+   GoogleMap,
+   InfoBox,
+   LoadScript,
+   MarkerF,
+} from '@react-google-maps/api';
 import icon from '../assets/marker.svg';
-import iconTransparent from '../assets/marker-transparent.svg';
 
 const containerStyle = {
    width: 'auto',
@@ -8,7 +12,8 @@ const containerStyle = {
 };
 
 const agencyCoords = { lat: 43.486793455921074, lng: -1.4642097082299514 };
-const littleBaionaCoords = { lat: 43.4825, lng: -1.466 };
+const littleBaionaCoords = { lat: 43.4833, lng: -1.47 };
+const baionaCoords = { lat: 43.49335, lng: -1.4769 };
 const centerCoords = { lat: 43.4885, lng: -1.468 };
 
 const zoom = () => {
@@ -18,6 +23,8 @@ const zoom = () => {
       return 15;
    }
 };
+
+const options = { closeBoxURL: '' };
 
 const Map = () => {
    return (
@@ -37,15 +44,13 @@ const Map = () => {
             >
                <MarkerF icon={icon} position={agencyCoords} />
 
-               <MarkerF
-                  label={{
-                     text: 'LITTLE BAYONNE',
-                     fontSize: '14px',
-                     fontWeight: '500',
-                  }}
-                  position={littleBaionaCoords}
-                  icon={iconTransparent}
-               />
+               <InfoBox options={options} position={baionaCoords}>
+                  <div className='baiona'>Bayonne</div>
+               </InfoBox>
+
+               <InfoBox options={options} position={littleBaionaCoords}>
+                  <div className='little-baiona'>Little Bayonne</div>
+               </InfoBox>
             </GoogleMap>
          </LoadScript>
       </div>

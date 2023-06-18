@@ -85,7 +85,8 @@ const Form = () => {
          <h2>Drop us a line</h2>
          <p>
             Ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua.
+            tempor incididunt ut labore et dolore magna{' '}
+            <span className='aliqua'>aliqua.</span>
          </p>
          <form onSubmit={handleSubmit(onSubmit)} noValidate>
             <div className='form-elements'>

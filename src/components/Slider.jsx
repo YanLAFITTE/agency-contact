@@ -44,10 +44,10 @@ const Slider = () => {
                {pictures &&
                   pictures.map((picture, id) => (
                      <swiper-slide key={id}>
-                        <a href={picture} data-fancybox='gallery'>
+                        <a href={picture} data-fancybox='gallery' aria-label='zoom'>
                            <img
                               src={picture}
-                              alt=''
+                              alt='slide'
                               height='420px'
                               width='900px'
                            />
