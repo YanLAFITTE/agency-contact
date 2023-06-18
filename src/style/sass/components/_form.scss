@@ -6,6 +6,7 @@
 .contact-form {
    height: 1000px;
    width: 50vw;
+   position: relative;
    @include mixins.background-gradient;
    @media #{variables.$large-down} {
       width: 100vw;
@@ -62,8 +63,7 @@
    }
 
    & input:focus,
-   textarea:focus,
-   button:focus {
+   textarea:focus {
       border: 1px solid variables.$clr-primary;
    }
 
@@ -97,6 +97,9 @@
       transition: variables.$transition;
       &:hover {
          transform: scale(1.02);
+      }
+      &:focus {
+         transform: scale(1);
       }
       & span {
          text-transform: uppercase;

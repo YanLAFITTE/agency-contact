@@ -3,12 +3,14 @@ import { useForm } from 'react-hook-form';
 import emailjs from '@emailjs/browser';
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
+import SuccessForm from '../components/SuccessForm';
 
 const Select = lazy(() => import('../components/Select'));
 
 const Form = () => {
    const [countryValue, setCountryValue] = useState('France');
    const [countries, setCountries] = useState([]);
+   const [openSuccess, setOpenSuccess] = useState(false);
 
    const sortCountries = (countries) => {
       countries.sort(function (a, b) {
@@ -55,7 +57,7 @@ const Form = () => {
             (result) => {
                console.log(result.text);
                e.target.reset();
-               alert('Message envoyé !');
+               setOpenSuccess(true);
                setCountryValue('France');
             },
             (error) => {
@@ -82,6 +84,7 @@ const Form = () => {
 
    return (
       <div className='form-container'>
+         {openSuccess && <SuccessForm setOpenSuccess={setOpenSuccess} />}
          <h2>Drop us a line</h2>
          <p>
             Ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod

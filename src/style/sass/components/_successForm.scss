@@ -1,0 +1,51 @@
+@use '../abstract/mixins';
+@use '../abstract/variables';
+
+.success-container {
+   position: absolute;
+   top: 0;
+   height: 100%;
+   width: 50vw;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   @include mixins.background-gradient;
+   z-index: 1;
+   @media #{variables.$large-down} {
+      width: 100vw;
+   }
+}
+
+.success-container div {
+   border: 1px solid variables.$clr-white;
+   border-radius: 10px;
+   padding: 20px;
+   opacity: 1;
+}
+
+.success-container p {
+   font-size: 18px;
+}
+
+.success-container button {
+   background: variables.$clr-white;
+   border-radius: 10px;
+   width: 240px;
+   height: 57px;
+   margin: 5px auto 0;
+   cursor: pointer;
+   transition: variables.$transition;
+   &:hover {
+      transform: scale(1.02);
+   }
+   &:focus {
+      transform: scale(1);
+   }
+   & span {
+      text-transform: uppercase;
+      font-size: 18px;
+      letter-spacing: 4px;
+      font-family: variables.$font-text-medium;
+      @include mixins.gradient-text;
+   }
+}

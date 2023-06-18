@@ -651,6 +651,7 @@ a[href^="https://www.google.com/maps"] {
 .contact-form {
   height: 1000px;
   width: 50vw;
+  position: relative;
   background: linear-gradient(90deg, #ed1e79, #6d0063);
   background-repeat: no-repeat;
 }
@@ -711,8 +712,7 @@ a[href^="https://www.google.com/maps"] {
   transition: all 200ms ease;
 }
 .form-container input:focus,
-.form-container textarea:focus,
-.form-container button:focus {
+.form-container textarea:focus {
   border: 1px solid #ed1e79;
 }
 .form-container input,
@@ -742,6 +742,9 @@ a[href^="https://www.google.com/maps"] {
 }
 .form-container button:hover {
   transform: scale(1.02);
+}
+.form-container button:focus {
+  transform: scale(1);
 }
 .form-container button span {
   text-transform: uppercase;
@@ -907,6 +910,62 @@ textarea:-webkit-autofill:focus {
     transform: rotate(360deg);
   }
 }
+.success-container {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 50vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(90deg, #ed1e79, #6d0063);
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+@media only screen and (max-width: 992px) {
+  .success-container {
+    width: 100vw;
+  }
+}
+
+.success-container div {
+  border: 1px solid #fff;
+  border-radius: 10px;
+  padding: 20px;
+  opacity: 1;
+}
+
+.success-container p {
+  font-size: 18px;
+}
+
+.success-container button {
+  background: #fff;
+  border-radius: 10px;
+  width: 240px;
+  height: 57px;
+  margin: 5px auto 0;
+  cursor: pointer;
+  transition: all 200ms ease;
+}
+.success-container button:hover {
+  transform: scale(1.02);
+}
+.success-container button:focus {
+  transform: scale(1);
+}
+.success-container button span {
+  text-transform: uppercase;
+  font-size: 18px;
+  letter-spacing: 4px;
+  font-family: "Roboto-Medium";
+  background-image: linear-gradient(90deg, #ed1e79, #6d0063);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-color: transparent;
+}
+
 /* Contact Section 1 */
 .contact-section1 {
   height: 420px;
