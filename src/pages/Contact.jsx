@@ -1,6 +1,9 @@
 import { Suspense, lazy } from 'react';
 import phoneSvg from '../assets/phone.svg';
-import localisationJpg from '../assets/images/localisation.webp';
+import localisationJpg from '../assets/images/localisation.jpg';
+import localisation330 from '../assets/images/responsive/localisation-330w.webp';
+import localisation768 from '../assets/images/responsive/localisation-768w.webp';
+
 import Loader from '../components/Loader';
 
 const Slider = lazy(() => import('../components/Slider'));
@@ -41,8 +44,10 @@ const Contact = () => {
                      src={localisationJpg}
                      alt='street at night, lit by a lamppost'
                      className='contact-section2__back'
-                     height='600px'
-                     width='950px'
+                     height='467px'
+                     width='700px'
+                     srcSet={`${localisation330} 330w, ${localisation768} 768w`}
+                     sizes='(max-width: 700px) 10vw, 100vw'
                   />
                   <div className='contact-section2__infos'>
                      <h3>How to find us</h3>
