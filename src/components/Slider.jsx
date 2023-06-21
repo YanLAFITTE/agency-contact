@@ -1,6 +1,7 @@
-import { useEffect, useRef, lazy } from 'react';
+import { useEffect, useRef } from 'react';
 import { register } from 'swiper/element/bundle';
 import sliderStyle from '../style/slider/slider.css?inline';
+import Fancybox from '../components/Fancybox';
 
 import picture1 from '../assets/images/photo1.jpg';
 import picture1_768 from '../assets/images/responsive/photo1-768w.webp';
@@ -19,8 +20,6 @@ const pictures = [
    { picJpeg: picture2, picSmall: picture2_768, picLarge: picture2_1024 },
    { picJpeg: picture3, picSmall: picture3_768, picLarge: picture3_1024 },
 ];
-
-const Fancybox = lazy(() => import('../components/Fancybox'));
 
 // register Swiper custom elements
 register();

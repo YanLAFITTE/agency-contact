@@ -1,11 +1,12 @@
-import { useEffect, useState, lazy } from 'react';
+import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
+
 import emailjs from '@emailjs/browser';
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
-import SuccessForm from '../components/SuccessForm';
 
-const Select = lazy(() => import('../components/Select'));
+import SuccessForm from '../components/SuccessForm';
+import Select from '../components/Select';
 
 const Form = () => {
    const [countryValue, setCountryValue] = useState('France');

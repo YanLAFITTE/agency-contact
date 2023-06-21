@@ -4,19 +4,14 @@ import {
    createRoutesFromElements,
    Route,
 } from 'react-router-dom';
-import { Suspense, lazy } from 'react';
-import Loader from './components/Loader';
-
-const RootLayout = lazy(() => import('./pages/RootLayout'));
-const ErrorPage = lazy(() => import('./pages/ErrorPage'));
-const Agency = lazy(() => import('./pages/Agency'));
-const Contact = lazy(() => import('./pages/Contact'));
-const Whoarewe = lazy(() => import('./pages/Whoarewe'));
-const Work = lazy(() => import('./pages/Work'));
-const Team = lazy(() => import('./pages/Team'));
-const Localisation = lazy(() => import('./pages/Localisation'));
-
-const renderLoader = () => <Loader />;
+import RootLayout from './pages/RootLayout';
+import ErrorPage from './pages/ErrorPage';
+import Agency from './pages/Agency';
+import Contact from './pages/Contact';
+import Whoarewe from './pages/Whoarewe';
+import Work from './pages/Work';
+import Team from './pages/Team';
+import Localisation from './pages/Localisation';
 
 const router = createBrowserRouter(
    createRoutesFromElements(
@@ -32,11 +27,7 @@ const router = createBrowserRouter(
 );
 
 const App = () => {
-   return (
-      <Suspense fallback={renderLoader}>
-         <RouterProvider router={router} />
-      </Suspense>
-   );
+   return <RouterProvider router={router} />;
 };
 
 export default App;
