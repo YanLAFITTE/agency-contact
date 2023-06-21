@@ -57,7 +57,7 @@ const Slider = () => {
                   pictures.map((picture, id) => (
                      <swiper-slide key={id}>
                         <a
-                           href={picture.picJpeg}
+                           href={picture.picLarge}
                            data-fancybox='gallery'
                            aria-label='zoom'
                         >
