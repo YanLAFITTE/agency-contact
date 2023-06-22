@@ -2,8 +2,8 @@ import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
 import logo from '../assets/logo.svg';
-import openMenuSvg from '../assets/open-menu.svg';
-import closeMenuSvg from '../assets/close-menu.svg';
+// import openMenuSvg from '../assets/open-menu.svg';
+// import closeMenuSvg from '../assets/close-menu.svg';
 
 const MainNavigation = () => {
    const [toggleNav, settoggleNav] = useState(false);
@@ -14,17 +14,13 @@ const MainNavigation = () => {
 
    return (
       <header>
-         <div className='header'>
-            <div className={toggleNav ? 'header__logo fixed' : 'header__logo'}>
-               <img
-                  src={logo}
-                  alt='round pink and purple degrader that blows bubbles containing an A in the shape of a triangle'
-               />
-            </div>
-            <nav
-               className={toggleNav ? 'header__nav display' : ' header__nav '}
-            >
-               <div className='nav-left'>
+         <nav className={toggleNav ? 'navbar show-nav' : 'navbar'}>
+            <div className='navbar__links'>
+               <div
+                  className={
+                     toggleNav ? 'navbar__left show-nav' : 'navbar__left'
+                  }
+               >
                   <NavLink
                      className={({ isActive }) =>
                         isActive ? 'active navlink' : 'navlink'
@@ -56,7 +52,17 @@ const MainNavigation = () => {
                      Work
                   </NavLink>
                </div>
-               <div className='nav-right'>
+               <div className='navbar__logo'>
+                  <img
+                     src={logo}
+                     alt='round pink and purple degrader that blows bubbles containing an A in the shape of a triangle'
+                  />
+               </div>
+               <div
+                  className={
+                     toggleNav ? 'navbar__right show-nav' : 'navbar__right'
+                  }
+               >
                   <NavLink
                      className={({ isActive }) =>
                         isActive ? 'active navlink' : 'navlink'
@@ -88,32 +94,14 @@ const MainNavigation = () => {
                      Contact
                   </NavLink>
                </div>
-            </nav>
-            <div
-               className={
-                  toggleNav ? 'header__mobile fixed' : ' header__mobile'
-               }
-            >
-               {toggleNav ? (
-                  <img
-                     src={closeMenuSvg}
-                     alt='icon menu fermeture'
-                     onClick={handleToggle}
-                     width='35px'
-                     height='35px'
-                  />
-               ) : (
-                  <img
-                     src={openMenuSvg}
-                     alt='icon menu ouverture'
-                     onClick={handleToggle}
-                     width='35px'
-                     height='35px'
-                  />
-               )}
-               <h2>Menu</h2>
             </div>
-         </div>
+            <button className='navbar__burger' onClick={handleToggle}>
+               <span
+                  className={toggleNav ? 'burger-bar show-nav' : 'burger-bar'}
+               ></span>
+               <h2>Menu</h2>
+            </button>
+         </nav>
          <div className='header-end'></div>
       </header>
    );

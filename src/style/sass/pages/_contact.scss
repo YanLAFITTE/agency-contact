@@ -21,7 +21,7 @@
    &__infos {
       padding: 0 180px 0 200px;
       @media #{variables.$xlscreen-down} {
-         padding: 0 20% 0 50px;
+         padding: 0 20% 0 70px;
       }
       @media #{variables.$large-down} {
          text-align: center;
@@ -116,7 +116,7 @@
       color: variables.$clr-white;
       padding: 0 180px 0 200px;
       @media #{variables.$xlscreen-down} {
-         padding: 0 20% 0 50px;
+         padding: 0 20% 0 70px;
       }
       @media #{variables.$large-down} {
          text-align: center;
