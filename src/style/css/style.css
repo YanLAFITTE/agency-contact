@@ -360,18 +360,13 @@ body {
   background: #fff;
   color: #000;
   min-height: 100vh;
+  min-height: -webkit-fill-available;
 }
 
 body::-webkit-scrollbar {
   display: none;
 }
 
-@supports (-webkit-touch-callout: none) {
-  body {
-    /* The hack for Safari */
-    min-height: -webkit-fill-available;
-  }
-}
 /* Layout page */
 .layout {
   display: flex;
