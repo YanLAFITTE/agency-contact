@@ -23,7 +23,7 @@
 
 ---
 
-<img src="./public/desktop.jpg" width="350"/>
+<img src="./desktop.jpg" width="350"/>
 
 ---
 
