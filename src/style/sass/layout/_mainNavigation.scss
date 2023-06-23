@@ -10,7 +10,7 @@
    justify-content: space-between;
    background-image: url('../../assets/texture.webp');
    object-fit: cover;
-
+   overflow: hidden;
    @media #{variables.$large-down} {
       height: 220px;
       transition: variables.$transition;
