@@ -339,6 +339,10 @@ template {
   box-sizing: border-box;
 }
 
+html {
+  height: -webkit-fill-available;
+}
+
 ul,
 li {
   list-style: none;
@@ -361,6 +365,11 @@ body::-webkit-scrollbar {
   display: none;
 }
 
+@supports (-webkit-touch-callout: none) {
+  body {
+    min-height: -webkit-fill-available;
+  }
+}
 /* Layout page */
 .layout {
   display: flex;

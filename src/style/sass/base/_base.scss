@@ -13,6 +13,9 @@
    list-style: none;
    box-sizing: border-box;
 }
+html {
+   height: -webkit-fill-available;
+}
 
 ul,
 li {
@@ -34,4 +37,10 @@ body {
 
 body::-webkit-scrollbar {
    display: none;
+}
+
+@supports (-webkit-touch-callout: none) {
+   body {
+      min-height: -webkit-fill-available;
+   }
 }
