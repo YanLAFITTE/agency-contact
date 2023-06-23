@@ -339,10 +339,6 @@ template {
   box-sizing: border-box;
 }
 
-html {
-  height: -webkit-fill-available;
-}
-
 ul,
 li {
   list-style: none;
@@ -355,10 +351,15 @@ a {
   color: #000;
 }
 
+html {
+  height: -webkit-fill-available;
+}
+
 body {
   font-family: "Roboto-Regular";
   background: #fff;
   color: #000;
+  min-height: 100vh;
 }
 
 body::-webkit-scrollbar {
@@ -367,6 +368,7 @@ body::-webkit-scrollbar {
 
 @supports (-webkit-touch-callout: none) {
   body {
+    /* The hack for Safari */
     min-height: -webkit-fill-available;
   }
 }

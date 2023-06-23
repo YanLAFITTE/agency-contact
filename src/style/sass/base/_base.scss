@@ -13,9 +13,6 @@
    list-style: none;
    box-sizing: border-box;
 }
-html {
-   height: -webkit-fill-available;
-}
 
 ul,
 li {
@@ -28,19 +25,25 @@ a {
    text-decoration: none;
    color: variables.$clr-black;
 }
+html {
+   height: -webkit-fill-available;
+ }
 
 body {
    font-family: variables.$font-text-regular;
    background: variables.$clr-white;
    color: variables.$clr-black;
+   min-height: 100vh;
 }
 
 body::-webkit-scrollbar {
    display: none;
 }
 
+
 @supports (-webkit-touch-callout: none) {
    body {
-      min-height: -webkit-fill-available;
+     /* The hack for Safari */
+     min-height: -webkit-fill-available;
    }
-}
+ }
