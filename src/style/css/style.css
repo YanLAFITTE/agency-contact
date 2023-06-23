@@ -351,16 +351,10 @@ a {
   color: #000;
 }
 
-html {
-  height: -webkit-fill-available;
-}
-
 body {
   font-family: "Roboto-Regular";
   background: #fff;
   color: #000;
-  min-height: 100vh;
-  min-height: -webkit-fill-available;
 }
 
 body::-webkit-scrollbar {
@@ -434,6 +428,11 @@ body::-webkit-scrollbar {
     top: 4px;
   }
 }
+@media only screen and (max-width: 480px) {
+  .navbar__logo {
+    left: 25px;
+  }
+}
 .navbar__burger {
   position: absolute;
   right: 55px;
@@ -442,6 +441,11 @@ body::-webkit-scrollbar {
   border: none;
   cursor: pointer;
   display: none;
+}
+@media only screen and (max-width: 480px) {
+  .navbar__burger {
+    right: 35px;
+  }
 }
 .navbar__burger .burger-bar, .navbar__burger .burger-bar::before, .navbar__burger .burger-bar::after {
   display: block;
