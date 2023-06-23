@@ -474,6 +474,7 @@ body::-webkit-scrollbar {
   font-family: "PermanentMarker";
   font-size: 28px;
   margin-top: -18px;
+  color: #000;
 }
 .navbar__left {
   padding: 16px 7% 0 200px;
